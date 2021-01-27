@@ -29,14 +29,14 @@ class __TwigTemplate_7777d3bf2bb994c0ffe974da70ace64746bb35006831e9870379ed28c05
         $this->blocks = [
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
-        $tags = array();
-        $filters = array();
+        $tags = array("component" => 13);
+        $filters = array("page" => 23);
         $functions = array();
 
         try {
             $this->sandbox->checkSecurity(
-                [],
-                [],
+                ['component'],
+                ['page'],
                 []
             );
         } catch (SecurityError $e) {
@@ -71,20 +71,68 @@ class __TwigTemplate_7777d3bf2bb994c0ffe974da70ace64746bb35006831e9870379ed28c05
         <div class=\" mt-6 lg:w-1/4 w-full lg:w-1/3\">
             <div class=\"mt-10 uppercase font-extrabold text-white mb-6\">Адрес / Контакты</div>
             <ul class=\"\">
-                <li class=\"text-white font-thin mt-2\"><strong class=\"font-extrabold\">Название:&nbsp;</strong>Автопомощь</li>
-                <li class=\"text-white font-thin mt-2\"><strong class=\"font-extrabold\">Адрес:&nbsp;</strong>Россия, Москва</li>
+                <li class=\"text-white font-thin mt-2\"><strong class=\"font-extrabold\">Название:&nbsp;</strong>";
+        // line 13
+        $context['__cms_component_params'] = [];
+        $context['__cms_component_params']['file'] = "home/foot1.htm"        ;
+        $context['__cms_component_params']['fixture'] = "p"        ;
+        $context['__cms_component_params']['tools'] = "bold,italic"        ;
+        $context['__cms_component_params']['class'] = ""        ;
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("contenteditor"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        echo "</li>
+                <li class=\"text-white font-thin mt-2\"><strong class=\"font-extrabold\">Адрес:&nbsp;</strong>";
+        // line 14
+        $context['__cms_component_params'] = [];
+        $context['__cms_component_params']['file'] = "home/foot2.htm"        ;
+        $context['__cms_component_params']['fixture'] = "p"        ;
+        $context['__cms_component_params']['tools'] = "bold,italic"        ;
+        $context['__cms_component_params']['class'] = ""        ;
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("contenteditor"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        echo "</li>
                 <li class=\"text-white font-thin mt-2\"><strong class=\"font-extrabold\">Телефон:&nbsp;</strong>
-                <a class=\"hover:text-orange-500\" href=\"tel:+79067031111\">+7 (906)703-11-11</a>
-                <li class=\"text-white font-thin mt-2\"><strong class=\"font-extrabold\">E-mail:&nbsp;</strong>Автопомощь</li>
+                <a class=\"hover:text-orange-500\" href=\"tel:+79067031111\">";
+        // line 16
+        $context['__cms_component_params'] = [];
+        $context['__cms_component_params']['file'] = "home/foot3.htm"        ;
+        $context['__cms_component_params']['fixture'] = "p"        ;
+        $context['__cms_component_params']['tools'] = "bold,italic"        ;
+        $context['__cms_component_params']['class'] = ""        ;
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("contenteditor"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        echo "</a>
+                <li class=\"text-white font-thin mt-2\"><strong class=\"font-extrabold\">E-mail:&nbsp;</strong>";
+        // line 17
+        $context['__cms_component_params'] = [];
+        $context['__cms_component_params']['file'] = "home/foot4.htm"        ;
+        $context['__cms_component_params']['fixture'] = "p"        ;
+        $context['__cms_component_params']['tools'] = "bold,italic"        ;
+        $context['__cms_component_params']['class'] = ""        ;
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("contenteditor"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        echo "</li>
             </ul>
         </div>
         <div class=\" mt-6 lg:w-1/4 w-full lg:w-1/3\">
             <div class=\"mt-10 uppercase font-extrabold text-white mb-6\">Полезные ссылки</div>
             <ul class=\"\">
-                <li class=\"text-white mb-2 hover:text-orange-500\"><a href=\"./index.html\">Главная</a></li>
-                <li class=\"text-white mb-2 hover:text-orange-500\"><a href=\"./price.html\">Цены</a></li>
-                <li class=\"text-white mb-2 hover:text-orange-500\"><a href=\"./review.html\">Отзывы</a></li>
-                <li class=\"text-white mb-2 hover:text-orange-500\"><a href=\"./contact.html\">Контакты</a></li>
+                <li class=\"text-white mb-2 hover:text-orange-500\"><a href=\"";
+        // line 23
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("home");
+        echo "\">Главная</a></li>
+                <li class=\"text-white mb-2 hover:text-orange-500\"><a href=\"";
+        // line 24
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("price");
+        echo "\">Цены</a></li>
+                <li class=\"text-white mb-2 hover:text-orange-500\"><a href=\"";
+        // line 25
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("reviews");
+        echo "\">Отзывы</a></li>
+                <li class=\"text-white mb-2 hover:text-orange-500\"><a href=\"";
+        // line 26
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("contact");
+        echo "\">Контакты</a></li>
                 <div class=\"flex ml-4\">
                     <a href=\"#\" class=\"w-8 mt-2\">
                         <img src=\"data:image/png;base64,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\" alt=\"\">
@@ -107,9 +155,14 @@ class __TwigTemplate_7777d3bf2bb994c0ffe974da70ace64746bb35006831e9870379ed28c05
         return "E:\\openserver\\domains\\auto/themes/auto/partials/site/footer.htm";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  62 => 1,);
+        return array (  134 => 26,  130 => 25,  126 => 24,  122 => 23,  107 => 17,  97 => 16,  86 => 14,  76 => 13,  62 => 1,);
     }
 
     public function getSourceContext()
@@ -126,20 +179,20 @@ class __TwigTemplate_7777d3bf2bb994c0ffe974da70ace64746bb35006831e9870379ed28c05
         <div class=\" mt-6 lg:w-1/4 w-full lg:w-1/3\">
             <div class=\"mt-10 uppercase font-extrabold text-white mb-6\">Адрес / Контакты</div>
             <ul class=\"\">
-                <li class=\"text-white font-thin mt-2\"><strong class=\"font-extrabold\">Название:&nbsp;</strong>Автопомощь</li>
-                <li class=\"text-white font-thin mt-2\"><strong class=\"font-extrabold\">Адрес:&nbsp;</strong>Россия, Москва</li>
+                <li class=\"text-white font-thin mt-2\"><strong class=\"font-extrabold\">Название:&nbsp;</strong>{% component 'contenteditor' file=\"home/foot1.htm\" fixture=\"p\" tools=\"bold,italic\" class=\"\" %}</li>
+                <li class=\"text-white font-thin mt-2\"><strong class=\"font-extrabold\">Адрес:&nbsp;</strong>{% component 'contenteditor' file=\"home/foot2.htm\" fixture=\"p\" tools=\"bold,italic\" class=\"\" %}</li>
                 <li class=\"text-white font-thin mt-2\"><strong class=\"font-extrabold\">Телефон:&nbsp;</strong>
-                <a class=\"hover:text-orange-500\" href=\"tel:+79067031111\">+7 (906)703-11-11</a>
-                <li class=\"text-white font-thin mt-2\"><strong class=\"font-extrabold\">E-mail:&nbsp;</strong>Автопомощь</li>
+                <a class=\"hover:text-orange-500\" href=\"tel:+79067031111\">{% component 'contenteditor' file=\"home/foot3.htm\" fixture=\"p\" tools=\"bold,italic\" class=\"\" %}</a>
+                <li class=\"text-white font-thin mt-2\"><strong class=\"font-extrabold\">E-mail:&nbsp;</strong>{% component 'contenteditor' file=\"home/foot4.htm\" fixture=\"p\" tools=\"bold,italic\" class=\"\" %}</li>
             </ul>
         </div>
         <div class=\" mt-6 lg:w-1/4 w-full lg:w-1/3\">
             <div class=\"mt-10 uppercase font-extrabold text-white mb-6\">Полезные ссылки</div>
             <ul class=\"\">
-                <li class=\"text-white mb-2 hover:text-orange-500\"><a href=\"./index.html\">Главная</a></li>
-                <li class=\"text-white mb-2 hover:text-orange-500\"><a href=\"./price.html\">Цены</a></li>
-                <li class=\"text-white mb-2 hover:text-orange-500\"><a href=\"./review.html\">Отзывы</a></li>
-                <li class=\"text-white mb-2 hover:text-orange-500\"><a href=\"./contact.html\">Контакты</a></li>
+                <li class=\"text-white mb-2 hover:text-orange-500\"><a href=\"{{ 'home'|page }}\">Главная</a></li>
+                <li class=\"text-white mb-2 hover:text-orange-500\"><a href=\"{{ 'price'|page }}\">Цены</a></li>
+                <li class=\"text-white mb-2 hover:text-orange-500\"><a href=\"{{ 'reviews'|page }}\">Отзывы</a></li>
+                <li class=\"text-white mb-2 hover:text-orange-500\"><a href=\"{{ 'contact'|page }}\">Контакты</a></li>
                 <div class=\"flex ml-4\">
                     <a href=\"#\" class=\"w-8 mt-2\">
                         <img src=\"data:image/png;base64,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\" alt=\"\">

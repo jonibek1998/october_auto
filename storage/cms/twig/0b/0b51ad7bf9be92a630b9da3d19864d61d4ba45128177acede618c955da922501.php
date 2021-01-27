@@ -29,13 +29,13 @@ class __TwigTemplate_7db6ec64d314e431576567fe1bdaaadca27c4b69bd40e9af130296310a5
         $this->blocks = [
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
-        $tags = array();
+        $tags = array("partial" => 203, "component" => 232);
         $filters = array("page" => 53);
         $functions = array();
 
         try {
             $this->sandbox->checkSecurity(
-                [],
+                ['partial', 'component'],
                 ['page'],
                 []
             );
@@ -141,54 +141,78 @@ class __TwigTemplate_7db6ec64d314e431576567fe1bdaaadca27c4b69bd40e9af130296310a5
                     <div style=\"width: 90vw; top: 70px;\" class=\"nav-submenu z-10  p-6 bg-gray-100 hidden absolute left-0\">
                         <ul class=\" flex flex-wrap items-center justify-evenly\">
                             <li class=\" relative flex m-2 w-1/5\">
-                                <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                <a href=\"";
+        // line 80
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("service1");
+        echo "\" class=\" flex items-center text-black hover:text-orange-500\">
                                     <i class=\"mr-2\">
                                         <img src=\"https://auto-help-spb.ru/images/avtohelp.png\" alt=\"\" class=\"w-10\">
                                     </i>Автомобильная помощь</a>
                             </li>
                             <li class=\" relative flex m-2 w-1/5\">
-                                    <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                    <a href=\"";
+        // line 86
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("service1");
+        echo "\" class=\" flex items-center text-black hover:text-orange-500\">
                                      <i class=\"mr-2\">
                                         <img src=\"https://auto-help-spb.ru/images/autopsy-car.png\" alt alt=\"\" class=\"w-10\">
                                     </i>Вскрытие авто</a>
                             </li>
                              <li class=\" relative flex m-2 w-1/5\">
-                                <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                <a href=\"";
+        // line 92
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("service2");
+        echo "\" class=\" flex items-center text-black hover:text-orange-500\">
                                     <i class=\"mr-2\">
                                         <img src=\"https://auto-help-spb.ru/images/opening-hood.png\" alt alt=\"\" class=\"w-10\">
                                     </i>Вскрытие капота</a>
                             </li>
                             <li class=\" relative flex m-2 w-1/5\">
-                                <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                <a href=\"";
+        // line 98
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("service3");
+        echo "\" class=\" flex items-center text-black hover:text-orange-500\">
                                     <i class=\"mr-2\">
                                         <img src=\"https://auto-help-spb.ru/images/opening-trunk.png\" alt alt=\"\" class=\"w-10\">
                                     </i>Вскрытие багажника</a>
                             </li>
                             <li class=\" relative flex m-2 w-1/5\">
-                                    <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                    <a href=\"";
+        // line 104
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("service4");
+        echo "\" class=\" flex items-center text-black hover:text-orange-500\">
                                     <i class=\"mr-2\">
                                         <img src=\"https://auto-help-spb.ru/images/menu-1.svg\" alt=\"\" class=\"w-10\">
                                     </i>Прикурить аккумулятор</a>
                             </li>
                             <li class=\" relative flex m-2 w-1/5\">
-                                <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                <a href=\"";
+        // line 110
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("service5");
+        echo "\" class=\" flex items-center text-black hover:text-orange-500\">
                                     <i class=\"mr-2\">
                                         <img src=\"https://auto-help-spb.ru/images/menu-11.svg \" alt alt=\"\" class=\"w-10\">
                                     </i>Замена АКБ</a>
                             </li>
                             <li class=\" relative flex m-2 w-1/5 avto\">
-                                <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                <a href=\"";
+        // line 116
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("service6");
+        echo "\" class=\" flex items-center text-black hover:text-orange-500\">
                                     <i class=\"mr-2\">
                                         <img src=\"https://auto-help-spb.ru/images/menu-4.svg \" alt=\"\" class=\"w-10\">
                                     </i>Автоэлектрик с <br> выездом</a>
                             </li>
                             <li class=\" relative flex m-2 w-1/5\">
-                                <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                <a href=\"";
+        // line 122
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("service7");
+        echo "\" class=\" flex items-center text-black hover:text-orange-500\">
                                     <i class=\"mr-2\">
                                         <img src=\"https://auto-help-spb.ru/images/car-mechanic-with-departure.png \" alt=\"\" class=\"w-10\">
                                     </i>Автомеханик с выездом</a>
                             </li>
-                            <li class=\" relative flex m-2 w-1/5\">
+                            <!-- <li class=\" relative flex m-2 w-1/5\">
                                 <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
                                     <i class=\"mr-2\">
                                         <img src=\"https://auto-help-spb.ru/images/menu-5.svg\" alt=\"\" class=\"w-10\">
@@ -239,9 +263,9 @@ class __TwigTemplate_7db6ec64d314e431576567fe1bdaaadca27c4b69bd40e9af130296310a5
                                         <img src=\"https://auto-help-spb.ru/images/menu-8.svg\" alt=\"\" class=\"w-10\">
                                     </i>Разблокировка АКПП
                                 </a>
-                            </li>
-                        </ul>
-                        </div>
+                            </li> -->
+                         </ul> 
+                    </div>
            
                     </li>
                             </li> 
@@ -271,30 +295,30 @@ class __TwigTemplate_7db6ec64d314e431576567fe1bdaaadca27c4b69bd40e9af130296310a5
 <div>
     
     <div class=\"flex flex-wrap  my-10  justify-evenly\">
-    <div class=\" flex-wrap lg:w-3/5 w-full flex-col justify-center items-center mx-4 lg:mx-0 font-thin\">
-        <h1 class=\"text-2xl md:text-3xl lg:text-4xl pt-8 font-extrabold\">Цены на работы</h1>
-        <div style=\"justify-content: center;\" class=\"flex flex-wrap  border-2 bg-white py-4 px-2 lg:px-10 justify-evenly text-center items-center my-6 \">
-            <p class=\"sm:w-1/3 w-7/12 \">Вскрытие авто</p>
-            <p class='font-extrabold sm:w-1/3 w-7/12'>от 600 руб.</p>
-            <p onclick=\"orderFormBtn()\" class='sm:w-1/3 w-7/12 price-click text-blue-500 font-bold underline cursor-pointer'>Заказать</p>
-        </div>
-        
-        <div style=\"justify-content: center;\" class=\"flex flex-wrap  border-2 bg-white py-4 px-2 lg:px-10 justify-evenly text-center items-center my-6 \">
-            <p class=\"sm:w-1/3 w-7/12\">Вскрытие авто</p>
-            <p class='font-extrabold sm:w-1/3 w-7/12'>от 600 руб.</p>
-            <p onclick=\"orderFormBtn()\" class='sm:w-1/3 w-7/12 price-click text-blue-500 font-bold underline cursor-pointer'>Заказать</p>
-        </div>
-        <div style=\"justify-content: center;\" class=\"flex flex-wrap  border-2 bg-white py-4 px-2 lg:px-10 justify-evenly text-center items-center my-6 \">
-            <p class=\"sm:w-1/3 w-7/12\">Вскрытие авто</p>
-            <p class='font-extrabold sm:w-1/3 w-7/12'>от 600 руб.</p>
-            <p onclick=\"orderFormBtn()\" class='sm:w-1/3 w-7/12 price-click text-blue-500 font-bold underline cursor-pointer'>Заказать</p>
-        </div>
-        <div style=\"justify-content: center;\" class=\"flex flex-wrap  border-2 bg-white py-4 px-2 lg:px-10 justify-evenly text-center items-center my-6 \">
-            <p class=\"sm:w-1/3 w-7/12\">Вскрытие авто</p>
-            <p class='font-extrabold sm:w-1/3 w-7/12'>от 600 руб.</p>
-            <p onclick=\"orderFormBtn()\" class='sm:w-1/3 w-7/12 price-click text-blue-500 font-bold underline cursor-pointer'>Заказать</p>
-        </div>
-    </div>
+        <div class=\" flex-wrap lg:w-3/5 w-full flex-col justify-center items-center mx-4 lg:mx-0 font-thin\">
+            <!-- <h1 class=\"text-2xl md:text-3xl lg:text-4xl pt-8 font-extrabold\">Цены на работы</h1> -->
+            ";
+        // line 203
+        $context['__cms_partial_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("prices/price1"        , $context['__cms_partial_params']        , true        );
+        unset($context['__cms_partial_params']);
+        // line 204
+        echo "            ";
+        $context['__cms_partial_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("prices/price2"        , $context['__cms_partial_params']        , true        );
+        unset($context['__cms_partial_params']);
+        // line 205
+        echo "            ";
+        $context['__cms_partial_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("prices/price3"        , $context['__cms_partial_params']        , true        );
+        unset($context['__cms_partial_params']);
+        // line 206
+        echo "            ";
+        $context['__cms_partial_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("prices/price4"        , $context['__cms_partial_params']        , true        );
+        unset($context['__cms_partial_params']);
+        // line 207
+        echo "        </div>
     
         <div class=\" flex-col bg-blue-600 p-4 text-white py-10 mx-4 lg:mx-0  lg:w-48 w-full\">
             <p>
@@ -319,18 +343,13 @@ class __TwigTemplate_7db6ec64d314e431576567fe1bdaaadca27c4b69bd40e9af130296310a5
     <div class=\"w-96 lg:w-1/2 flex-col bg-white justify-between items-center text-center py-10 my-10\">
         <h1 class=\"font-extrabold text-2xl\">Оставьте заявку</h1>
         <p>Можем предложить специальные условия именно для вас!</p>
-        <form action=\"\" class=\"flex-col\">
-            <input class=\"bg-gray-300 w-96 md:w-1/2 mt-4 p-2\" type=\"text\" placeholder=\"Ваше имя\" required />
-            <input class=\"bg-gray-300 w-96 md:w-1/2 mt-4 p-2\" type=\"tel\" placeholder=\"Ваш телефон*\" required />
-            <textarea class=\"bg-gray-300 w-96 md:w-1/2 mt-4 p-2\" cols=\"30\" rows=\"10\" placeholder=\"Комментарий\"></textarea>
-            <div class=\"flex text-center justify-center items-center cursor-pointer\">
-            <input class=\"hidden\" type=\"file\" id=\"upload\">
-            <label class=\"cursor-pointer\" for=\"upload\"><i class=\"fas fa-paperclip mr-2 cursor-pointer\"></i>Прикрепить фото</label>
-            </div>
-            <input class=\"cursor-pointer w-96 md:w-1/2 bg-blue-700 text-white mt-2 hover:bg-blue-900 p-2 lg:mt-5 px-6 outline-none\" type=\"submit\" value=\"Узнать стоимость\">  
-            </div>
-        </form>
-    </div>
+        ";
+        // line 232
+        $context['__cms_component_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("commentsPost"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        // line 233
+        echo "    </div>
 </div>
 </div>";
     }
@@ -347,7 +366,7 @@ class __TwigTemplate_7db6ec64d314e431576567fe1bdaaadca27c4b69bd40e9af130296310a5
 
     public function getDebugInfo()
     {
-        return array (  258 => 186,  254 => 185,  250 => 184,  116 => 53,  62 => 1,);
+        return array (  352 => 233,  348 => 232,  321 => 207,  316 => 206,  311 => 205,  306 => 204,  302 => 203,  282 => 186,  278 => 185,  274 => 184,  209 => 122,  200 => 116,  191 => 110,  182 => 104,  173 => 98,  164 => 92,  155 => 86,  146 => 80,  116 => 53,  62 => 1,);
     }
 
     public function getSourceContext()
@@ -431,54 +450,54 @@ class __TwigTemplate_7db6ec64d314e431576567fe1bdaaadca27c4b69bd40e9af130296310a5
                     <div style=\"width: 90vw; top: 70px;\" class=\"nav-submenu z-10  p-6 bg-gray-100 hidden absolute left-0\">
                         <ul class=\" flex flex-wrap items-center justify-evenly\">
                             <li class=\" relative flex m-2 w-1/5\">
-                                <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                <a href=\"{{ 'service1'|page }}\" class=\" flex items-center text-black hover:text-orange-500\">
                                     <i class=\"mr-2\">
                                         <img src=\"https://auto-help-spb.ru/images/avtohelp.png\" alt=\"\" class=\"w-10\">
                                     </i>Автомобильная помощь</a>
                             </li>
                             <li class=\" relative flex m-2 w-1/5\">
-                                    <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                    <a href=\"{{ 'service1'|page }}\" class=\" flex items-center text-black hover:text-orange-500\">
                                      <i class=\"mr-2\">
                                         <img src=\"https://auto-help-spb.ru/images/autopsy-car.png\" alt alt=\"\" class=\"w-10\">
                                     </i>Вскрытие авто</a>
                             </li>
                              <li class=\" relative flex m-2 w-1/5\">
-                                <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                <a href=\"{{ 'service2'|page }}\" class=\" flex items-center text-black hover:text-orange-500\">
                                     <i class=\"mr-2\">
                                         <img src=\"https://auto-help-spb.ru/images/opening-hood.png\" alt alt=\"\" class=\"w-10\">
                                     </i>Вскрытие капота</a>
                             </li>
                             <li class=\" relative flex m-2 w-1/5\">
-                                <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                <a href=\"{{ 'service3'|page }}\" class=\" flex items-center text-black hover:text-orange-500\">
                                     <i class=\"mr-2\">
                                         <img src=\"https://auto-help-spb.ru/images/opening-trunk.png\" alt alt=\"\" class=\"w-10\">
                                     </i>Вскрытие багажника</a>
                             </li>
                             <li class=\" relative flex m-2 w-1/5\">
-                                    <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                    <a href=\"{{ 'service4'|page }}\" class=\" flex items-center text-black hover:text-orange-500\">
                                     <i class=\"mr-2\">
                                         <img src=\"https://auto-help-spb.ru/images/menu-1.svg\" alt=\"\" class=\"w-10\">
                                     </i>Прикурить аккумулятор</a>
                             </li>
                             <li class=\" relative flex m-2 w-1/5\">
-                                <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                <a href=\"{{ 'service5'|page }}\" class=\" flex items-center text-black hover:text-orange-500\">
                                     <i class=\"mr-2\">
                                         <img src=\"https://auto-help-spb.ru/images/menu-11.svg \" alt alt=\"\" class=\"w-10\">
                                     </i>Замена АКБ</a>
                             </li>
                             <li class=\" relative flex m-2 w-1/5 avto\">
-                                <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                <a href=\"{{ 'service6'|page }}\" class=\" flex items-center text-black hover:text-orange-500\">
                                     <i class=\"mr-2\">
                                         <img src=\"https://auto-help-spb.ru/images/menu-4.svg \" alt=\"\" class=\"w-10\">
                                     </i>Автоэлектрик с <br> выездом</a>
                             </li>
                             <li class=\" relative flex m-2 w-1/5\">
-                                <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                <a href=\"{{ 'service7'|page }}\" class=\" flex items-center text-black hover:text-orange-500\">
                                     <i class=\"mr-2\">
                                         <img src=\"https://auto-help-spb.ru/images/car-mechanic-with-departure.png \" alt=\"\" class=\"w-10\">
                                     </i>Автомеханик с выездом</a>
                             </li>
-                            <li class=\" relative flex m-2 w-1/5\">
+                            <!-- <li class=\" relative flex m-2 w-1/5\">
                                 <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
                                     <i class=\"mr-2\">
                                         <img src=\"https://auto-help-spb.ru/images/menu-5.svg\" alt=\"\" class=\"w-10\">
@@ -529,9 +548,9 @@ class __TwigTemplate_7db6ec64d314e431576567fe1bdaaadca27c4b69bd40e9af130296310a5
                                         <img src=\"https://auto-help-spb.ru/images/menu-8.svg\" alt=\"\" class=\"w-10\">
                                     </i>Разблокировка АКПП
                                 </a>
-                            </li>
-                        </ul>
-                        </div>
+                            </li> -->
+                         </ul> 
+                    </div>
            
                     </li>
                             </li> 
@@ -552,30 +571,13 @@ class __TwigTemplate_7db6ec64d314e431576567fe1bdaaadca27c4b69bd40e9af130296310a5
 <div>
     
     <div class=\"flex flex-wrap  my-10  justify-evenly\">
-    <div class=\" flex-wrap lg:w-3/5 w-full flex-col justify-center items-center mx-4 lg:mx-0 font-thin\">
-        <h1 class=\"text-2xl md:text-3xl lg:text-4xl pt-8 font-extrabold\">Цены на работы</h1>
-        <div style=\"justify-content: center;\" class=\"flex flex-wrap  border-2 bg-white py-4 px-2 lg:px-10 justify-evenly text-center items-center my-6 \">
-            <p class=\"sm:w-1/3 w-7/12 \">Вскрытие авто</p>
-            <p class='font-extrabold sm:w-1/3 w-7/12'>от 600 руб.</p>
-            <p onclick=\"orderFormBtn()\" class='sm:w-1/3 w-7/12 price-click text-blue-500 font-bold underline cursor-pointer'>Заказать</p>
+        <div class=\" flex-wrap lg:w-3/5 w-full flex-col justify-center items-center mx-4 lg:mx-0 font-thin\">
+            <!-- <h1 class=\"text-2xl md:text-3xl lg:text-4xl pt-8 font-extrabold\">Цены на работы</h1> -->
+            {% partial 'prices/price1' %}
+            {% partial 'prices/price2' %}
+            {% partial 'prices/price3' %}
+            {% partial 'prices/price4' %}
         </div>
-        
-        <div style=\"justify-content: center;\" class=\"flex flex-wrap  border-2 bg-white py-4 px-2 lg:px-10 justify-evenly text-center items-center my-6 \">
-            <p class=\"sm:w-1/3 w-7/12\">Вскрытие авто</p>
-            <p class='font-extrabold sm:w-1/3 w-7/12'>от 600 руб.</p>
-            <p onclick=\"orderFormBtn()\" class='sm:w-1/3 w-7/12 price-click text-blue-500 font-bold underline cursor-pointer'>Заказать</p>
-        </div>
-        <div style=\"justify-content: center;\" class=\"flex flex-wrap  border-2 bg-white py-4 px-2 lg:px-10 justify-evenly text-center items-center my-6 \">
-            <p class=\"sm:w-1/3 w-7/12\">Вскрытие авто</p>
-            <p class='font-extrabold sm:w-1/3 w-7/12'>от 600 руб.</p>
-            <p onclick=\"orderFormBtn()\" class='sm:w-1/3 w-7/12 price-click text-blue-500 font-bold underline cursor-pointer'>Заказать</p>
-        </div>
-        <div style=\"justify-content: center;\" class=\"flex flex-wrap  border-2 bg-white py-4 px-2 lg:px-10 justify-evenly text-center items-center my-6 \">
-            <p class=\"sm:w-1/3 w-7/12\">Вскрытие авто</p>
-            <p class='font-extrabold sm:w-1/3 w-7/12'>от 600 руб.</p>
-            <p onclick=\"orderFormBtn()\" class='sm:w-1/3 w-7/12 price-click text-blue-500 font-bold underline cursor-pointer'>Заказать</p>
-        </div>
-    </div>
     
         <div class=\" flex-col bg-blue-600 p-4 text-white py-10 mx-4 lg:mx-0  lg:w-48 w-full\">
             <p>
@@ -600,17 +602,7 @@ class __TwigTemplate_7db6ec64d314e431576567fe1bdaaadca27c4b69bd40e9af130296310a5
     <div class=\"w-96 lg:w-1/2 flex-col bg-white justify-between items-center text-center py-10 my-10\">
         <h1 class=\"font-extrabold text-2xl\">Оставьте заявку</h1>
         <p>Можем предложить специальные условия именно для вас!</p>
-        <form action=\"\" class=\"flex-col\">
-            <input class=\"bg-gray-300 w-96 md:w-1/2 mt-4 p-2\" type=\"text\" placeholder=\"Ваше имя\" required />
-            <input class=\"bg-gray-300 w-96 md:w-1/2 mt-4 p-2\" type=\"tel\" placeholder=\"Ваш телефон*\" required />
-            <textarea class=\"bg-gray-300 w-96 md:w-1/2 mt-4 p-2\" cols=\"30\" rows=\"10\" placeholder=\"Комментарий\"></textarea>
-            <div class=\"flex text-center justify-center items-center cursor-pointer\">
-            <input class=\"hidden\" type=\"file\" id=\"upload\">
-            <label class=\"cursor-pointer\" for=\"upload\"><i class=\"fas fa-paperclip mr-2 cursor-pointer\"></i>Прикрепить фото</label>
-            </div>
-            <input class=\"cursor-pointer w-96 md:w-1/2 bg-blue-700 text-white mt-2 hover:bg-blue-900 p-2 lg:mt-5 px-6 outline-none\" type=\"submit\" value=\"Узнать стоимость\">  
-            </div>
-        </form>
+        {% component 'commentsPost' %}
     </div>
 </div>
 </div>", "E:\\openserver\\domains\\auto/themes/auto/pages/prices.htm", "");

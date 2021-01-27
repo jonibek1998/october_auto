@@ -1,11 +1,13 @@
-1611656549a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:3653:"description = "Default layout"
+1611734772a:1:{s:11:"default.htm";a:7:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:3674:"description = "Default layout"
+
+[SeoCmsPage]
 ==
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Driving School</title>
+   
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -19,6 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
 <!-- Chatra {literal} -->
     {% styles %}
+     {% component 'SeoCmsPage' %}
 <script>
     (function(d, w, c) {
         w.ChatraID = 'Assxvo6PCRhHcagxW';
@@ -83,12 +86,12 @@ body {font-size: 16px; font-weight: 500; font-family: 'Montserrat', sans-serif;}
 {% framework extras %}
 {% scripts %}
 </body>
-</html>";s:5:"mtime";i:1611641605;s:6:"markup";s:3617:"<!DOCTYPE html>
+</html>";s:5:"mtime";i:1611730557;s:6:"markup";s:3622:"<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Driving School</title>
+   
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -102,6 +105,7 @@ body {font-size: 16px; font-weight: 500; font-family: 'Montserrat', sans-serif;}
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
 <!-- Chatra {literal} -->
     {% styles %}
+     {% component 'SeoCmsPage' %}
 <script>
     (function(d, w, c) {
         w.ChatraID = 'Assxvo6PCRhHcagxW';
@@ -166,4 +170,4 @@ body {font-size: 16px; font-weight: 500; font-family: 'Montserrat', sans-serif;}
 {% framework extras %}
 {% scripts %}
 </body>
-</html>";s:4:"code";N;s:11:"description";s:14:"Default layout";}}
+</html>";s:4:"code";N;s:11:"description";s:14:"Default layout";s:10:"SeoCmsPage";a:0:{}}}

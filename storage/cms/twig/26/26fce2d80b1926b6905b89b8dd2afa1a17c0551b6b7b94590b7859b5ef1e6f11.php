@@ -29,14 +29,14 @@ class __TwigTemplate_b619619f43acc9e530a220d780b2704acde1203f1aa0c1f36aa20de0271
         $this->blocks = [
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
-        $tags = array("set" => 74, "for" => 82, "partial" => 171);
-        $filters = array("media" => 86, "escape" => 87, "page" => 97);
+        $tags = array("component" => 51, "partial" => 253);
+        $filters = array("page" => 75);
         $functions = array();
 
         try {
             $this->sandbox->checkSecurity(
-                ['set', 'for', 'partial'],
-                ['media', 'escape', 'page'],
+                ['component', 'partial'],
+                ['page'],
                 []
             );
         } catch (SecurityError $e) {
@@ -109,17 +109,45 @@ class __TwigTemplate_b619619f43acc9e530a220d780b2704acde1203f1aa0c1f36aa20de0271
              </a>
                  <div class='hidden lg:flex w-96'>
                  <i class=\"fas fa-map-marker-alt pr-2\"></i>
-                 <p>Работаем по Москву</p>
-             </div>
+                 ";
+        // line 51
+        $context['__cms_component_params'] = [];
+        $context['__cms_component_params']['file'] = "home/head1.htm"        ;
+        $context['__cms_component_params']['fixture'] = "p"        ;
+        $context['__cms_component_params']['tools'] = "bold,italic"        ;
+        $context['__cms_component_params']['class'] = ""        ;
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("contenteditor"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        // line 52
+        echo "             </div>
              <div class='flex hidden lg:flex w-96'>
                  <i class=\"fas fa-clock pr-2\"></i>
-                 <p>Работаем 24 часа</p>
-             </div>
+                 ";
+        // line 55
+        $context['__cms_component_params'] = [];
+        $context['__cms_component_params']['file'] = "home/head2.htm"        ;
+        $context['__cms_component_params']['fixture'] = "p"        ;
+        $context['__cms_component_params']['tools'] = "bold,italic"        ;
+        $context['__cms_component_params']['class'] = ""        ;
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("contenteditor"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        // line 56
+        echo "             </div>
              <div class='flex w-96'>
                  <i class=\"fas fa-phone-alt pr-2\"></i>
                  <div class=\"flex-col text-xs md:text-base\">
-                 <a class=\"hover:text-blue-500\" href=\"tel:+79067031111\">+7 (906)703-11-11</a>
-                 </div>
+                 <!-- <a class=\"hover:text-blue-500\" href=\"tel:+79067031111\">+7 (906)703-11-11</a> -->
+                 ";
+        // line 61
+        $context['__cms_component_params'] = [];
+        $context['__cms_component_params']['file'] = "home/head3.htm"        ;
+        $context['__cms_component_params']['fixture'] = "a"        ;
+        $context['__cms_component_params']['tools'] = "bold,italic"        ;
+        $context['__cms_component_params']['class'] = "hover:text-blue-500"        ;
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("contenteditor"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        // line 62
+        echo "                 </div>
              </div>
          </div>
          <div class=\"  text-white cursor-pointer\">
@@ -131,76 +159,145 @@ class __TwigTemplate_b619619f43acc9e530a220d780b2704acde1203f1aa0c1f36aa20de0271
                      <img src=\"https://auto-help-spb.ru/images/menu-arrow.svg\" alt=\"\">
                      <div style=\"width: 90vw; top: 70px;\" class=\"nav-submenu z-10  p-6 bg-gray-100 hidden absolute left-0\">
                          <ul class=\" flex flex-wrap items-center justify-evenly\">
-                            
-                            ";
-        // line 74
-        $context["records"] = twig_get_attribute($this->env, $this->source, ($context["builderList"] ?? null), "records", [], "any", false, false, true, 74);
+                            <li class=\" relative flex m-2 w-1/5\">
+                                <a href=\"";
         // line 75
-        echo "                            ";
-        $context["displayColumn"] = twig_get_attribute($this->env, $this->source, ($context["builderList"] ?? null), "displayColumn", [], "any", false, false, true, 75);
-        // line 76
-        echo "                            ";
-        $context["noRecordsMessage"] = twig_get_attribute($this->env, $this->source, ($context["builderList"] ?? null), "noRecordsMessage", [], "any", false, false, true, 76);
-        // line 77
-        echo "                            ";
-        $context["detailsPage"] = twig_get_attribute($this->env, $this->source, ($context["builderList"] ?? null), "detailsPage", [], "any", false, false, true, 77);
-        // line 78
-        echo "                            ";
-        $context["detailsKeyColumn"] = twig_get_attribute($this->env, $this->source, ($context["builderList"] ?? null), "detailsKeyColumn", [], "any", false, false, true, 78);
-        // line 79
-        echo "                            ";
-        $context["detailsUrlParameter"] = twig_get_attribute($this->env, $this->source, ($context["builderList"] ?? null), "detailsUrlParameter", [], "any", false, false, true, 79);
-        // line 80
-        echo "                            
-                           
-                            ";
-        // line 82
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(($context["records"] ?? null));
-        $context['_iterated'] = false;
-        foreach ($context['_seq'] as $context["_key"] => $context["record"]) {
-            // line 83
-            echo "                             <li class=\" relative flex m-2 w-1/5\">
-                                 <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("service1");
+        echo "\" class=\" flex items-center text-black hover:text-orange-500\">
+                                    <i class=\"mr-2\">
+                                        <img src=\"https://auto-help-spb.ru/images/avtohelp.png\" alt=\"\" class=\"w-10\">
+                                    </i>Автомобильная помощь</a>
+                            </li>
+                            <li class=\" relative flex m-2 w-1/5\">
+                                    <a href=\"";
+        // line 81
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("service1");
+        echo "\" class=\" flex items-center text-black hover:text-orange-500\">
                                      <i class=\"mr-2\">
-                                         <img src=\"";
-            // line 86
-            echo $this->extensions['System\Twig\Extension']->mediaFilter($this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["record"], "icon", [], "any", false, false, true, 86), 86, $this->source));
-            echo "\" alt=\"\" class=\"w-10\">
-                                     </i>";
-            // line 87
-            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["record"], "title", [], "any", false, false, true, 87), 87, $this->source), "html", null, true);
-            echo "</a>
-                             </li>
-                             ";
-            $context['_iterated'] = true;
-        }
-        if (!$context['_iterated']) {
-            // line 90
-            echo "                                    <li class=\"no-data\">";
-            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(($context["noRecordsMessage"] ?? null), 90, $this->source), "html", null, true);
-            echo "</li>
-                            ";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['record'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 92
-        echo "                         </ul>
+                                        <img src=\"https://auto-help-spb.ru/images/autopsy-car.png\" alt alt=\"\" class=\"w-10\">
+                                    </i>Вскрытие авто</a>
+                            </li>
+                             <li class=\" relative flex m-2 w-1/5\">
+                                <a href=\"";
+        // line 87
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("service2");
+        echo "\" class=\" flex items-center text-black hover:text-orange-500\">
+                                    <i class=\"mr-2\">
+                                        <img src=\"https://auto-help-spb.ru/images/opening-hood.png\" alt alt=\"\" class=\"w-10\">
+                                    </i>Вскрытие капота</a>
+                            </li>
+                            <li class=\" relative flex m-2 w-1/5\">
+                                <a href=\"";
+        // line 93
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("service3");
+        echo "\" class=\" flex items-center text-black hover:text-orange-500\">
+                                    <i class=\"mr-2\">
+                                        <img src=\"https://auto-help-spb.ru/images/opening-trunk.png\" alt alt=\"\" class=\"w-10\">
+                                    </i>Вскрытие багажника</a>
+                            </li>
+                            <li class=\" relative flex m-2 w-1/5\">
+                                    <a href=\"";
+        // line 99
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("service4");
+        echo "\" class=\" flex items-center text-black hover:text-orange-500\">
+                                    <i class=\"mr-2\">
+                                        <img src=\"https://auto-help-spb.ru/images/menu-1.svg\" alt=\"\" class=\"w-10\">
+                                    </i>Прикурить аккумулятор</a>
+                            </li>
+                            <li class=\" relative flex m-2 w-1/5\">
+                                <a href=\"";
+        // line 105
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("service5");
+        echo "\" class=\" flex items-center text-black hover:text-orange-500\">
+                                    <i class=\"mr-2\">
+                                        <img src=\"https://auto-help-spb.ru/images/menu-11.svg \" alt alt=\"\" class=\"w-10\">
+                                    </i>Замена АКБ</a>
+                            </li>
+                            <li class=\" relative flex m-2 w-1/5 avto\">
+                                <a href=\"";
+        // line 111
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("service6");
+        echo "\" class=\" flex items-center text-black hover:text-orange-500\">
+                                    <i class=\"mr-2\">
+                                        <img src=\"https://auto-help-spb.ru/images/menu-4.svg \" alt=\"\" class=\"w-10\">
+                                    </i>Автоэлектрик с <br> выездом</a>
+                            </li>
+                            <li class=\" relative flex m-2 w-1/5\">
+                                <a href=\"";
+        // line 117
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("service7");
+        echo "\" class=\" flex items-center text-black hover:text-orange-500\">
+                                    <i class=\"mr-2\">
+                                        <img src=\"https://auto-help-spb.ru/images/car-mechanic-with-departure.png \" alt=\"\" class=\"w-10\">
+                                    </i>Автомеханик с выездом</a>
+                            </li>
+                            <!-- <li class=\" relative flex m-2 w-1/5\">
+                                <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                    <i class=\"mr-2\">
+                                        <img src=\"https://auto-help-spb.ru/images/menu-5.svg\" alt=\"\" class=\"w-10\">
+                                    </i>Вытащить машину</a>
+                            </li>
+                            <li class=\" relative flex m-2 w-1/5 mr-15\">
+                                <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                    <i class=\"mr-2\">
+                                        <img src=\" https://auto-help-spb.ru/images/menu-10.svg\" alt alt=\"\" class=\"w-10\">
+                                    </i>Ремонт, замена и <br> подкачка колёс</a>
+                            </li>
+                            <li class=\" relative flex m-2 w-1/5\">
+                                <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                    <i class=\"mr-2\">
+                                        <img src=\"https://auto-help-spb.ru/images/vehicle-diagnostics.png\"  alt=\"\" class=\"w-10\">
+                                     </i>Диагностика <br> автомобиля</a>
+                            </li>
+                            <li class=\" relative flex m-2 w-1/5\">
+                                <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                        <i class=\"mr-2\">
+                                            <img src=\"https://auto-help-spb.ru/images/alarm-repair-and-deactivation.png \" alt=\"\" class=\"w-10\">
+                                        </i>Ремонт и отключение <br> сигнализации</a>
+                            </li>
+                            <li class=\" relative flex m-2 w-1/5\">
+                                <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                    <i class=\"mr-2\">
+                                        <img src=\"https://auto-help-spb.ru/images/menu-2.svg\" alt=\"\" class=\"w-10\">
+                                    </i>Подвоз топлива
+                                </a>
+                            </li>
+                            <li class=\" relative flex m-2 w-1/5\">
+                                <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                    <i class=\"mr-2\">
+                                        <img src=\"https://auto-help-spb.ru/images/engine-start.png\" alt=\"\" class=\"w-10\">
+                                    </i>Запуск двигателя
+                                </a>
+                            </li>
+                            <li class=\" relative flex m-2 w-1/5\">
+                                <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                    <i class=\"mr-2\">
+                                        <img src=\"https://auto-help-spb.ru/images/menu-7.svg \" alt=\"\" class=\"w-10\">
+                                    </i>Буксировка автомобиля
+                                </a>
+                            </li>
+                            <li class=\" relative flex m-2 w-1/5\">
+                                <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                    <i class=\"mr-2\">
+                                        <img src=\"https://auto-help-spb.ru/images/menu-8.svg\" alt=\"\" class=\"w-10\">
+                                    </i>Разблокировка АКПП
+                                </a>
+                            </li> -->
+                         </ul>
                          </div>
             
                      </li>
                              </li> 
                  <li class=\"hidden lg:flex hover:text-orange-600 w-1/6 ml-10\"><a href=\"";
-        // line 97
+        // line 179
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("prices");
         echo "\"> ЦЕНЫ </a></li>
                  <li class=\"hidden lg:flex hover:text-orange-600 w-1/6\"><a href=\"";
-        // line 98
+        // line 180
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("reviews");
         echo "\"> ОТЗЫВЫ </a></li>
                  <li class=\"hidden lg:flex hover:text-orange-600 w-1/6\"><a href=\"";
-        // line 99
+        // line 181
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("contact");
         echo "\"> КОНТАКТЫ </a></li>
                  <li onclick=\"orderCallBtn()\" class=\"border-2 text-center border-white w-6/12 sm:w-1/3 lg:w-1/6 py-3 hover:bg-blue-700 hover:border-blue-700
@@ -209,15 +306,72 @@ class __TwigTemplate_b619619f43acc9e530a220d780b2704acde1203f1aa0c1f36aa20de0271
          </div>
  </header>
  <div class=\"header font-bold lg:text-5xl md:text-3xl text-xl mt-16 mx-6 md:mx-24\">
- <h1 class=\"text-white\">АВТОМОБИЛЬНАЯ ПОМОЩЬ НА ДОРОГЕ В МОСКВЕ</h1>
- <h1 class=\"text-white\"> ОТ <span class=\"text-orange-600\"> 500 РУБЛЕЙ </span></h1>
+ ";
+        // line 188
+        $context['__cms_component_params'] = [];
+        $context['__cms_component_params']['file'] = "home/title.htm"        ;
+        $context['__cms_component_params']['fixture'] = "h1"        ;
+        $context['__cms_component_params']['tools'] = "bold,italic"        ;
+        $context['__cms_component_params']['class'] = "text-white"        ;
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("contenteditor"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        // line 189
+        echo " <h1 class=\"text-white\"> ОТ ";
+        $context['__cms_component_params'] = [];
+        $context['__cms_component_params']['file'] = "home/price.htm"        ;
+        $context['__cms_component_params']['fixture'] = "span"        ;
+        $context['__cms_component_params']['tools'] = "bold,italic"        ;
+        $context['__cms_component_params']['class'] = "text-orange-600"        ;
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("contenteditor"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        echo "</h1>
  </div>
  <ul class=\"text-sm md:text-lg lg:xl flex-col items-center justify-evenly text-white mt-10 mx-6 md:mx-24\">
-     <li><i class=\"fas fa-angle-double-right pr-4 text-orange-600 mt-4\"></i>Возникла непредвиденная ситуация с авто?</li>
-     <li><i class=\"fas fa-angle-double-right pr-4 text-orange-600 mt-4\"></i>Нужно срочно ехать?</li>
-     <li><i class=\"fas fa-angle-double-right pr-4 text-orange-600 mt-4\"></i>Предлагаем любую автопомощь!</li>
-     <li><i class=\"fas fa-angle-double-right pr-4 text-orange-600 mt-4\"></i>Приезжаем на место от 15 минут</li>
-     <li><i class=\"fas fa-angle-double-right pr-4 text-orange-600 mt-4\"></i>Работаем без посредников</li>
+     <li><i class=\"fas fa-angle-double-right pr-4 text-orange-600 mt-4\"></i>";
+        // line 192
+        $context['__cms_component_params'] = [];
+        $context['__cms_component_params']['file'] = "home/list1.htm"        ;
+        $context['__cms_component_params']['tools'] = "bold,italic"        ;
+        $context['__cms_component_params']['class'] = ""        ;
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("contenteditor"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        echo "</li>
+     <li><i class=\"fas fa-angle-double-right pr-4 text-orange-600 mt-4\"></i>";
+        // line 193
+        $context['__cms_component_params'] = [];
+        $context['__cms_component_params']['file'] = "home/list2.htm"        ;
+        $context['__cms_component_params']['tools'] = "bold,italic"        ;
+        $context['__cms_component_params']['class'] = ""        ;
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("contenteditor"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        echo "</li>
+     <li><i class=\"fas fa-angle-double-right pr-4 text-orange-600 mt-4\"></i>";
+        // line 194
+        $context['__cms_component_params'] = [];
+        $context['__cms_component_params']['file'] = "home/list3.htm"        ;
+        $context['__cms_component_params']['tools'] = "bold,italic"        ;
+        $context['__cms_component_params']['class'] = ""        ;
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("contenteditor"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        echo "</li>
+     <li><i class=\"fas fa-angle-double-right pr-4 text-orange-600 mt-4\"></i>";
+        // line 195
+        $context['__cms_component_params'] = [];
+        $context['__cms_component_params']['file'] = "home/list4.htm"        ;
+        $context['__cms_component_params']['tools'] = "bold,italic"        ;
+        $context['__cms_component_params']['class'] = ""        ;
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("contenteditor"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        echo "</li>
+     <li><i class=\"fas fa-angle-double-right pr-4 text-orange-600 mt-4\"></i>";
+        // line 196
+        $context['__cms_component_params'] = [];
+        $context['__cms_component_params']['file'] = "home/list5.htm"        ;
+        $context['__cms_component_params']['tools'] = "bold,italic"        ;
+        $context['__cms_component_params']['class'] = ""        ;
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("contenteditor"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        echo "</li>
      <button onclick=\"callMasterBtn()\" style=\"font-size: 16px;font-weight: 700;\" class=\"outline-none mt-16 mb-8 py-4 px-8 bg-blue-600 hover:bg-blue-700  transition duration-200\">Вызват мастера
      </button>  
        <!-- Root element for center items -->
@@ -273,13 +427,13 @@ class __TwigTemplate_b619619f43acc9e530a220d780b2704acde1203f1aa0c1f36aa20de0271
  </div>
  </div>
  <div class=\"h-full w-full bg-white\">
-<div class=\"w-4/5 m-auto flex justify-center text-center flex-wrap items-center\">
+<div class=\"m-auto flex flex-wrap justify-center text-center items-center\">
     ";
-        // line 171
+        // line 253
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("home/aboutus"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 172
+        // line 254
         echo " </div>
  <div class=\"pb-16 h-full flex-col bg-blue-700 justify-between items-center mt-10\">
      <div>
@@ -312,10 +466,28 @@ class __TwigTemplate_b619619f43acc9e530a220d780b2704acde1203f1aa0c1f36aa20de0271
 <div class=\" mx-4 lg:mx-16 bg-white py-16\">
     <div class=\"flex items-center flex-wrap\">
         <div class=\"md:w-1/2 w-full\">
-     <p class=\"\">Как часто бывает, автомобиль ломается в самый неподходящий момент. Не каждый может починить машину самостоятельно, качественно и быстро. Не всегда под рукой окажутся инструменты или запчасти, требуемые для устранения неполадок. Специалисты компании «Автопомощь» в Спб могут исправить большинство поломок на месте.</p>
-     <br>
-     <p class=\"\">Мы оказываем широкий спектр ремонтных услуг круглосуточно, имеет фиксированные цены, опытных и быстро реагирующих мастеров. Стоимость работы ниже рыночных на 10-20 %. Современные способы связи, с помощью которых можно четко определить объем работы, сокращают время ожидания. В отдельных случаях применяется эвакуация машины до места назначения.</p>
-     </div>
+     ";
+        // line 286
+        $context['__cms_component_params'] = [];
+        $context['__cms_component_params']['file'] = "home/text1.htm"        ;
+        $context['__cms_component_params']['fixture'] = "p"        ;
+        $context['__cms_component_params']['tools'] = "bold,italic"        ;
+        $context['__cms_component_params']['class'] = ""        ;
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("contenteditor"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        // line 287
+        echo "     <br>
+     ";
+        // line 288
+        $context['__cms_component_params'] = [];
+        $context['__cms_component_params']['file'] = "home/text2.htm"        ;
+        $context['__cms_component_params']['fixture'] = "p"        ;
+        $context['__cms_component_params']['tools'] = "bold,italic"        ;
+        $context['__cms_component_params']['class'] = ""        ;
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("contenteditor"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        // line 289
+        echo "     </div>
      <img class=\"mt-6 md:w-1/2 w-full\" src=\"https://auto-help-spb.ru/assets/cache_image/images/one/index_585x361_721.jpg\" alt=\"\">   
  </div>
  </div>
@@ -374,11 +546,11 @@ class __TwigTemplate_b619619f43acc9e530a220d780b2704acde1203f1aa0c1f36aa20de0271
      <div class=\" flex-wrap lg:w-3/5 w-full flex-col justify-center items-center mx-4 lg:mx-0 font-thin\">
          
         ";
-        // line 265
+        // line 347
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("home/price"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 266
+        // line 348
         echo "     </div>
      
          <div class=\" flex-col bg-blue-600 p-4 text-white py-10 mx-4 lg:mx-0  lg:w-48 w-full\">
@@ -404,40 +576,54 @@ class __TwigTemplate_b619619f43acc9e530a220d780b2704acde1203f1aa0c1f36aa20de0271
      <h1 class=\"py-8 text-4xl text-center text-white font-extrabold\">Как мы работаем</h1>
      <div class=\"flex flex-wrap justify-evenly\">
         ";
-        // line 290
+        // line 372
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("home/work"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 291
+        // line 373
         echo "     </div>
  </div>
 </div>
 <div class=\" bg-gray-100 py-12\">
  <div class=\"flex-col flex-wrap mx-4 md:mx-16 lg:mx-24\">
      <h1 class=\"title text-center font-extrabold text-xl md:text-2xl lg:text-4xl py-6\">
-         Профессиональная автопомощь на дороге
-     </h1>
+        ";
+        // line 379
+        $context['__cms_component_params'] = [];
+        $context['__cms_component_params']['file'] = "home/title2.htm"        ;
+        $context['__cms_component_params']['fixture'] = "h1"        ;
+        $context['__cms_component_params']['tools'] = "bold,italic"        ;
+        $context['__cms_component_params']['class'] = "title text-center font-extrabold text-xl md:text-2xl lg:text-4xl py-6"        ;
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("contenteditor"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        // line 380
+        echo "     </h1>
      <div class=\"flex-row flex-wrap \">
          <div class=\"flex-col font-thin px-2  w-full\">
-         <p> 
-             Поломка транспортного средства влечет серьезные последствия и
-             для устранения не стоит пренебрегать помощью автомастера.
-         </p><br>
-         <p>
-             В работе должны быть четко выполнены мельчайшие детали, чтобы исключить повторные 
-             случаи. Ведь не всегда
-             пользователь может сразу определить возникшую проблему.
-         </p> <br>
-         </div>
+            ";
+        // line 383
+        $context['__cms_component_params'] = [];
+        $context['__cms_component_params']['file'] = "home/text4.htm"        ;
+        $context['__cms_component_params']['fixture'] = "p"        ;
+        $context['__cms_component_params']['tools'] = "bold,italic"        ;
+        $context['__cms_component_params']['class'] = ""        ;
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("contenteditor"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        // line 384
+        echo "         </div>
+         <br>
          <div class=\"flex-col font-thin px-2  w-full\">
-         <p>
-             Небольшие поломки часто скрывают серьезные нарушения в работе автомобиля, 
-             которые определит только профессионал.
-             Не стоит рисковать, вызов мастера – наилучшее решение для автолюбителя.
-         </p><br>
-         <p>
-             Звоните нам прямо сейчас +7 (906)703-11-11. Мастера во всех районах!
-         </p>
+            ";
+        // line 387
+        $context['__cms_component_params'] = [];
+        $context['__cms_component_params']['file'] = "home/text5.htm"        ;
+        $context['__cms_component_params']['fixture'] = "p"        ;
+        $context['__cms_component_params']['tools'] = "bold,italic"        ;
+        $context['__cms_component_params']['class'] = ""        ;
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("contenteditor"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        // line 388
+        echo "         </p>
          </div>
      </div>
  </div>
@@ -449,11 +635,11 @@ class __TwigTemplate_b619619f43acc9e530a220d780b2704acde1203f1aa0c1f36aa20de0271
      <div class=\"flex text-center justify-center items-center flex-wrap\">
         <div class=\"owl-carousel owl-theme\">
             ";
-        // line 330
+        // line 399
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("home/service"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 331
+        // line 400
         echo "        </div>
      
    
@@ -464,9 +650,9 @@ class __TwigTemplate_b619619f43acc9e530a220d780b2704acde1203f1aa0c1f36aa20de0271
 <div class=\"flex items-center justify-center\">
  <img src=\"https://auto-help-spb.ru/images/form-bg.jpg\" class=\"absolute w-full\" alt=\"\">
  <div style=\"z-index: 3;\" class=\"bg-white  lg:my-10  lg:w-11/12 text-center py-8\">
-     <h1 class=\"mt-6 mb-4 font-extrabold text-2xl\">Оставьте заявку</h1>
-     <p class=\"pb-4\">Можем предложить специальные условия именно для вас!</p>
-     <form action=\"\" class=\"flex lg:full  flex-wrap justify-evenly items-center\">
+     <!-- <h1 class=\"mt-6 mb-4 font-extrabold text-2xl\">Оставьте заявку</h1>
+     <p class=\"pb-4\">Можем предложить специальные условия именно для вас!</p> -->
+     <!-- <form action=\"\" class=\"flex lg:full  flex-wrap justify-evenly items-center\">
          <input class=\"bg-gray-300 p-2 pr-16 ml-4 outline-none m-4 lg:w-1/4\" type=\"text\" placeholder=\"Ваше имя\">
          <input class=\"bg-gray-300 p-2 pr-16 ml-4 outline-none m-4 lg:w-1/4\" type=\"tel\" placeholder=\"Ваш телефон*\">
          <div class=\"flex flex-wrap items-center justify-center lg:w-1/4\">
@@ -474,61 +660,112 @@ class __TwigTemplate_b619619f43acc9e530a220d780b2704acde1203f1aa0c1f36aa20de0271
          <input class=\"hidden\" type=\"file\" id=\"file\">
          <label class=\"w-9/12 sm:w-full cursor-pointer mt-4 lg:mt-0\" for=\"file\"><i class=\"fas fa-paperclip mr-2\"></i>Прикрепить фото</label>
          </div>
-     </form>
- </div>
+     </form> -->
+     ";
+        // line 421
+        $context['__cms_component_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("formSubscribe"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        // line 422
+        echo " </div>
 </div>
 <!-- Служба техпомощи компании section start -->
 <div class=\" bg-gray-100\">
- <div class=\"flex-col mx-4 md:mx-8 lg:mx-12 py-8 flex-wrap\">
-     <h1 class=\"text-center font-extrabold text-lg sm:text-2xl lg:text-4xl py-12\">
-         Служба техпомощи компании
-     </h1>
-     <div class=\"flex mx-4 flex-wrap justify-center\">
-         <div class=\"flex-col font-thin text-sm md:text-lg\">
-         <p> 
-             Специалисты компании имеют многолетний опыт в техническом обслуживании автомобилей различных марок и моделей.
-              Они качественно выполняют следующие работы:
-         </p><br>
+ <div class=\"flex-col mx-4 md:mx-8 lg:mx-12 py-8 \">
+        ";
+        // line 427
+        $context['__cms_component_params'] = [];
+        $context['__cms_component_params']['file'] = "home/title3.htm"        ;
+        $context['__cms_component_params']['fixture'] = "h1"        ;
+        $context['__cms_component_params']['tools'] = "bold,italic"        ;
+        $context['__cms_component_params']['class'] = "text-center font-extrabold text-lg sm:text-2xl lg:text-4xl py-12"        ;
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("contenteditor"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        // line 428
+        echo "     <div class=\"flex mx-4 flex-wrap justify-center\">
+         <div class=\"flex  flex-wrap font-thin text-sm md:text-lg\">
+            ";
+        // line 430
+        $context['__cms_component_params'] = [];
+        $context['__cms_component_params']['file'] = "home/text3.htm"        ;
+        $context['__cms_component_params']['fixture'] = "p"        ;
+        $context['__cms_component_params']['tools'] = "bold,italic"        ;
+        $context['__cms_component_params']['class'] = ""        ;
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("contenteditor"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        // line 431
+        echo "         <br>
+         <!-- ";
+        // line 432
+        $context['__cms_component_params'] = [];
+        $context['__cms_component_params']['file'] = "home/list6.htm"        ;
+        $context['__cms_component_params']['fixture'] = "ul"        ;
+        $context['__cms_component_params']['tools'] = "bold,italic,ordered-list"        ;
+        $context['__cms_component_params']['class'] = ""        ;
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("contenteditor"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        echo " -->
          <ul class=\"pl-4\">
-             <li class=\"list-disc\"> Вскрытие багажника, капота или автомобиля;</li>
-             <li class=\"list-disc\">Запуск или замену аккумулятора;</li>
-             <li class=\"list-disc\">Устраняют поломки электроники или механические повреждения;</li>
-             <li class=\"list-disc\">Устраняют поломки электроники или механические повреждения;</li>
-             <li class=\"list-disc\">Услуги шиномонтажа (замена, ремонт или подкачка колес);</li>
-             <li class=\"list-disc\">Налаживание работы сигнализации, противоугонных систем;</li>
-             <li class=\"list-disc\">Запуск двигателя;</li>
-             <li class=\"list-disc\">Определение поломки на месте с последующим ее устранением;</li>
-             <li class=\"list-disc\">Проблемы с АКПП.</li>
+             ";
+        // line 434
+        $context['__cms_component_params'] = [];
+        $context['__cms_component_params']['file'] = "home/list6.htm"        ;
+        $context['__cms_component_params']['fixture'] = ""        ;
+        $context['__cms_component_params']['tools'] = "bold,italic,ordered-list"        ;
+        $context['__cms_component_params']['class'] = "list-disc"        ;
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("contenteditor"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        // line 435
+        echo "
          </ul>
          <br>
-         <p>В компанию можно обратиться, если закончилось топливо или требуется вытащить автомобиль из ямы или кювета,
-              требуется транспортировка транспортного средства, при невозможности техпомощи на дороге.</p>
-              <h1 class=\"text-center font-extrabold text-lg sm:text-2xl lg:text-4xl py-12\">
-                 Способы связи
-             </h1>
-             <p>Чтобы получить быструю помощь на дорогах Спб и области, нужно связаться с диспетчером по телефонам 
-                 (позвонить или запросить обратный звонок),
-                  обратиться в мессенджер или оставить заявку на </p>
-         </div>
-         <div class=\"flex-col font-thin\">
-         <p>
-             сайте. Для скорого решения проблемы и определения стоимости работ следует приложить фото поломки.
-         </p><br>
-         <p>
-             Для клиентов доступны WhatsApp, Viber, Telegram, VK. Автомастер озвучит фиксированную цену работы,
-              при спорных вопросах стоимость определяется на месте мастером.
-         </p><br>
-         <p>В компании всегда найдется выгодное предложение для клиентов, ни одно обращение не останется без внимания.</p>
-         <h1 class=\"text-center font-extrabold text-lg sm:text-2xl lg:text-4xl py-12\">
-             Время важно!
-         </h1>
-         <p>Непредсказуемые проблемы в работе автомобиля заставляют изменить планы. 
-             Чтобы исключить возможные неудобства, диспетчер подбирает и отправляет на вызов мастера, ближайшего к месту поломки.
-              Грамотные и отлаженные действия сотрудников в кратчайшие сроки устранят поломку.</p><br>
-              <p>В компании работают мастера со стажем более 15 лет, знающие и легко разбирающиеся в современных, классических или эксклюзивных моделях автомобилей любых марок. 
-                  Они качественно и быстро окажут техпомощь на дорогах Спб.</p>
-                  <br>
-                  <p>Перечень предложенных услуг выполняют непосредственно сотрудники, что значительно сокращает время ожидания результата.</p>
+         ";
+        // line 438
+        $context['__cms_component_params'] = [];
+        $context['__cms_component_params']['file'] = "home/text6.htm"        ;
+        $context['__cms_component_params']['fixture'] = "p"        ;
+        $context['__cms_component_params']['tools'] = "bold,italic"        ;
+        $context['__cms_component_params']['class'] = ""        ;
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("contenteditor"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        // line 439
+        echo "                ";
+        $context['__cms_component_params'] = [];
+        $context['__cms_component_params']['file'] = "home/title4.htm"        ;
+        $context['__cms_component_params']['fixture'] = "h1"        ;
+        $context['__cms_component_params']['tools'] = "bold,italic"        ;
+        $context['__cms_component_params']['class'] = "text-center font-extrabold text-lg sm:text-2xl lg:text-4xl py-12 m-auto"        ;
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("contenteditor"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        // line 440
+        echo "                ";
+        $context['__cms_component_params'] = [];
+        $context['__cms_component_params']['file'] = "home/text7.htm"        ;
+        $context['__cms_component_params']['fixture'] = "p"        ;
+        $context['__cms_component_params']['tools'] = "bold,italic"        ;
+        $context['__cms_component_params']['class'] = ""        ;
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("contenteditor"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        // line 441
+        echo "                ";
+        $context['__cms_component_params'] = [];
+        $context['__cms_component_params']['file'] = "home/title4.htm"        ;
+        $context['__cms_component_params']['fixture'] = "h1"        ;
+        $context['__cms_component_params']['tools'] = "bold,italic"        ;
+        $context['__cms_component_params']['class'] = "text-center font-extrabold text-lg sm:text-2xl lg:text-4xl py-12 m-auto"        ;
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("contenteditor"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        // line 442
+        echo "                ";
+        $context['__cms_component_params'] = [];
+        $context['__cms_component_params']['file'] = "home/text8.htm"        ;
+        $context['__cms_component_params']['fixture'] = "p"        ;
+        $context['__cms_component_params']['tools'] = "bold,italic"        ;
+        $context['__cms_component_params']['class'] = ""        ;
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("contenteditor"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        // line 443
+        echo "
          </div>
      </div>
  </div>
@@ -558,7 +795,7 @@ class __TwigTemplate_b619619f43acc9e530a220d780b2704acde1203f1aa0c1f36aa20de0271
      <div class=\"w-96 lg:w-1/2 flex-col bg-white justify-between items-center text-center py-10 my-10\">
          <h1 class=\"font-extrabold text-2xl\">Оставьте заявку</h1>
          <p>Можем предложить специальные условия именно для вас!</p>
-         <form action=\"\" class=\"flex-col\">
+         <!-- <form action=\"\" class=\"flex-col\">
              <input class=\"bg-gray-300 w-96 md:w-1/2 mt-4 p-2\" type=\"text\" placeholder=\"Ваше имя\" required />
              <input class=\"bg-gray-300 w-96 md:w-1/2 mt-4 p-2\" type=\"tel\" placeholder=\"Ваш телефон*\" required />
              <textarea class=\"bg-gray-300 w-96 md:w-1/2 mt-4 p-2\" cols=\"30\" rows=\"10\" placeholder=\"Комментарий\"></textarea>
@@ -568,8 +805,14 @@ class __TwigTemplate_b619619f43acc9e530a220d780b2704acde1203f1aa0c1f36aa20de0271
              </div>
              <input class=\"cursor-pointer w-96 md:w-1/2 bg-blue-700 text-white mt-2 hover:bg-blue-900 p-2 lg:mt-5 px-6 outline-none\" type=\"submit\" value=\"Узнать стоимость\">  
              </div>
-         </form>
-     </div>
+         </form> -->
+         ";
+        // line 484
+        $context['__cms_component_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("commentsPost"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        // line 485
+        echo "     </div>
  </div>
 </div>";
     }
@@ -586,7 +829,7 @@ class __TwigTemplate_b619619f43acc9e530a220d780b2704acde1203f1aa0c1f36aa20de0271
 
     public function getDebugInfo()
     {
-        return array (  457 => 331,  453 => 330,  412 => 291,  408 => 290,  382 => 266,  378 => 265,  283 => 172,  279 => 171,  204 => 99,  200 => 98,  196 => 97,  189 => 92,  180 => 90,  172 => 87,  168 => 86,  163 => 83,  158 => 82,  154 => 80,  151 => 79,  148 => 78,  145 => 77,  142 => 76,  139 => 75,  137 => 74,  62 => 1,);
+        return array (  815 => 485,  811 => 484,  768 => 443,  759 => 442,  750 => 441,  741 => 440,  732 => 439,  724 => 438,  719 => 435,  711 => 434,  700 => 432,  697 => 431,  689 => 430,  685 => 428,  677 => 427,  670 => 422,  666 => 421,  643 => 400,  639 => 399,  626 => 388,  618 => 387,  613 => 384,  605 => 383,  600 => 380,  592 => 379,  584 => 373,  580 => 372,  554 => 348,  550 => 347,  490 => 289,  482 => 288,  479 => 287,  471 => 286,  437 => 254,  433 => 253,  368 => 196,  359 => 195,  350 => 194,  341 => 193,  332 => 192,  319 => 189,  311 => 188,  301 => 181,  297 => 180,  293 => 179,  228 => 117,  219 => 111,  210 => 105,  201 => 99,  192 => 93,  183 => 87,  174 => 81,  165 => 75,  150 => 62,  142 => 61,  135 => 56,  127 => 55,  122 => 52,  114 => 51,  62 => 1,);
     }
 
     public function getSourceContext()
@@ -641,16 +884,17 @@ class __TwigTemplate_b619619f43acc9e530a220d780b2704acde1203f1aa0c1f36aa20de0271
              </a>
                  <div class='hidden lg:flex w-96'>
                  <i class=\"fas fa-map-marker-alt pr-2\"></i>
-                 <p>Работаем по Москву</p>
+                 {% component 'contenteditor' file=\"home/head1.htm\" fixture=\"p\" tools=\"bold,italic\" class=\"\" %}
              </div>
              <div class='flex hidden lg:flex w-96'>
                  <i class=\"fas fa-clock pr-2\"></i>
-                 <p>Работаем 24 часа</p>
+                 {% component 'contenteditor' file=\"home/head2.htm\" fixture=\"p\" tools=\"bold,italic\" class=\"\" %}
              </div>
              <div class='flex w-96'>
                  <i class=\"fas fa-phone-alt pr-2\"></i>
                  <div class=\"flex-col text-xs md:text-base\">
-                 <a class=\"hover:text-blue-500\" href=\"tel:+79067031111\">+7 (906)703-11-11</a>
+                 <!-- <a class=\"hover:text-blue-500\" href=\"tel:+79067031111\">+7 (906)703-11-11</a> -->
+                 {% component 'contenteditor' file=\"home/head3.htm\" fixture=\"a\" tools=\"bold,italic\" class=\"hover:text-blue-500\" %}
                  </div>
              </div>
          </div>
@@ -663,25 +907,106 @@ class __TwigTemplate_b619619f43acc9e530a220d780b2704acde1203f1aa0c1f36aa20de0271
                      <img src=\"https://auto-help-spb.ru/images/menu-arrow.svg\" alt=\"\">
                      <div style=\"width: 90vw; top: 70px;\" class=\"nav-submenu z-10  p-6 bg-gray-100 hidden absolute left-0\">
                          <ul class=\" flex flex-wrap items-center justify-evenly\">
-                            
-                            {% set records = builderList.records %}
-                            {% set displayColumn = builderList.displayColumn %}
-                            {% set noRecordsMessage = builderList.noRecordsMessage %}
-                            {% set detailsPage = builderList.detailsPage %}
-                            {% set detailsKeyColumn = builderList.detailsKeyColumn %}
-                            {% set detailsUrlParameter = builderList.detailsUrlParameter %}
-                            
-                           
-                            {% for record in records %}
-                             <li class=\" relative flex m-2 w-1/5\">
-                                 <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                            <li class=\" relative flex m-2 w-1/5\">
+                                <a href=\"{{ 'service1'|page }}\" class=\" flex items-center text-black hover:text-orange-500\">
+                                    <i class=\"mr-2\">
+                                        <img src=\"https://auto-help-spb.ru/images/avtohelp.png\" alt=\"\" class=\"w-10\">
+                                    </i>Автомобильная помощь</a>
+                            </li>
+                            <li class=\" relative flex m-2 w-1/5\">
+                                    <a href=\"{{ 'service1'|page }}\" class=\" flex items-center text-black hover:text-orange-500\">
                                      <i class=\"mr-2\">
-                                         <img src=\"{{ record.icon|media }}\" alt=\"\" class=\"w-10\">
-                                     </i>{{ record.title }}</a>
-                             </li>
-                             {% else %}
-                                    <li class=\"no-data\">{{ noRecordsMessage }}</li>
-                            {% endfor %}
+                                        <img src=\"https://auto-help-spb.ru/images/autopsy-car.png\" alt alt=\"\" class=\"w-10\">
+                                    </i>Вскрытие авто</a>
+                            </li>
+                             <li class=\" relative flex m-2 w-1/5\">
+                                <a href=\"{{ 'service2'|page }}\" class=\" flex items-center text-black hover:text-orange-500\">
+                                    <i class=\"mr-2\">
+                                        <img src=\"https://auto-help-spb.ru/images/opening-hood.png\" alt alt=\"\" class=\"w-10\">
+                                    </i>Вскрытие капота</a>
+                            </li>
+                            <li class=\" relative flex m-2 w-1/5\">
+                                <a href=\"{{ 'service3'|page }}\" class=\" flex items-center text-black hover:text-orange-500\">
+                                    <i class=\"mr-2\">
+                                        <img src=\"https://auto-help-spb.ru/images/opening-trunk.png\" alt alt=\"\" class=\"w-10\">
+                                    </i>Вскрытие багажника</a>
+                            </li>
+                            <li class=\" relative flex m-2 w-1/5\">
+                                    <a href=\"{{ 'service4'|page }}\" class=\" flex items-center text-black hover:text-orange-500\">
+                                    <i class=\"mr-2\">
+                                        <img src=\"https://auto-help-spb.ru/images/menu-1.svg\" alt=\"\" class=\"w-10\">
+                                    </i>Прикурить аккумулятор</a>
+                            </li>
+                            <li class=\" relative flex m-2 w-1/5\">
+                                <a href=\"{{ 'service5'|page }}\" class=\" flex items-center text-black hover:text-orange-500\">
+                                    <i class=\"mr-2\">
+                                        <img src=\"https://auto-help-spb.ru/images/menu-11.svg \" alt alt=\"\" class=\"w-10\">
+                                    </i>Замена АКБ</a>
+                            </li>
+                            <li class=\" relative flex m-2 w-1/5 avto\">
+                                <a href=\"{{ 'service6'|page }}\" class=\" flex items-center text-black hover:text-orange-500\">
+                                    <i class=\"mr-2\">
+                                        <img src=\"https://auto-help-spb.ru/images/menu-4.svg \" alt=\"\" class=\"w-10\">
+                                    </i>Автоэлектрик с <br> выездом</a>
+                            </li>
+                            <li class=\" relative flex m-2 w-1/5\">
+                                <a href=\"{{ 'service7'|page }}\" class=\" flex items-center text-black hover:text-orange-500\">
+                                    <i class=\"mr-2\">
+                                        <img src=\"https://auto-help-spb.ru/images/car-mechanic-with-departure.png \" alt=\"\" class=\"w-10\">
+                                    </i>Автомеханик с выездом</a>
+                            </li>
+                            <!-- <li class=\" relative flex m-2 w-1/5\">
+                                <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                    <i class=\"mr-2\">
+                                        <img src=\"https://auto-help-spb.ru/images/menu-5.svg\" alt=\"\" class=\"w-10\">
+                                    </i>Вытащить машину</a>
+                            </li>
+                            <li class=\" relative flex m-2 w-1/5 mr-15\">
+                                <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                    <i class=\"mr-2\">
+                                        <img src=\" https://auto-help-spb.ru/images/menu-10.svg\" alt alt=\"\" class=\"w-10\">
+                                    </i>Ремонт, замена и <br> подкачка колёс</a>
+                            </li>
+                            <li class=\" relative flex m-2 w-1/5\">
+                                <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                    <i class=\"mr-2\">
+                                        <img src=\"https://auto-help-spb.ru/images/vehicle-diagnostics.png\"  alt=\"\" class=\"w-10\">
+                                     </i>Диагностика <br> автомобиля</a>
+                            </li>
+                            <li class=\" relative flex m-2 w-1/5\">
+                                <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                        <i class=\"mr-2\">
+                                            <img src=\"https://auto-help-spb.ru/images/alarm-repair-and-deactivation.png \" alt=\"\" class=\"w-10\">
+                                        </i>Ремонт и отключение <br> сигнализации</a>
+                            </li>
+                            <li class=\" relative flex m-2 w-1/5\">
+                                <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                    <i class=\"mr-2\">
+                                        <img src=\"https://auto-help-spb.ru/images/menu-2.svg\" alt=\"\" class=\"w-10\">
+                                    </i>Подвоз топлива
+                                </a>
+                            </li>
+                            <li class=\" relative flex m-2 w-1/5\">
+                                <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                    <i class=\"mr-2\">
+                                        <img src=\"https://auto-help-spb.ru/images/engine-start.png\" alt=\"\" class=\"w-10\">
+                                    </i>Запуск двигателя
+                                </a>
+                            </li>
+                            <li class=\" relative flex m-2 w-1/5\">
+                                <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                    <i class=\"mr-2\">
+                                        <img src=\"https://auto-help-spb.ru/images/menu-7.svg \" alt=\"\" class=\"w-10\">
+                                    </i>Буксировка автомобиля
+                                </a>
+                            </li>
+                            <li class=\" relative flex m-2 w-1/5\">
+                                <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                    <i class=\"mr-2\">
+                                        <img src=\"https://auto-help-spb.ru/images/menu-8.svg\" alt=\"\" class=\"w-10\">
+                                    </i>Разблокировка АКПП
+                                </a>
+                            </li> -->
                          </ul>
                          </div>
             
@@ -696,15 +1021,15 @@ class __TwigTemplate_b619619f43acc9e530a220d780b2704acde1203f1aa0c1f36aa20de0271
          </div>
  </header>
  <div class=\"header font-bold lg:text-5xl md:text-3xl text-xl mt-16 mx-6 md:mx-24\">
- <h1 class=\"text-white\">АВТОМОБИЛЬНАЯ ПОМОЩЬ НА ДОРОГЕ В МОСКВЕ</h1>
- <h1 class=\"text-white\"> ОТ <span class=\"text-orange-600\"> 500 РУБЛЕЙ </span></h1>
+ {% component 'contenteditor' file=\"home/title.htm\" fixture=\"h1\" tools=\"bold,italic\" class=\"text-white\" %}
+ <h1 class=\"text-white\"> ОТ {% component 'contenteditor' file=\"home/price.htm\" fixture=\"span\" tools=\"bold,italic\" class=\"text-orange-600\" %}</h1>
  </div>
  <ul class=\"text-sm md:text-lg lg:xl flex-col items-center justify-evenly text-white mt-10 mx-6 md:mx-24\">
-     <li><i class=\"fas fa-angle-double-right pr-4 text-orange-600 mt-4\"></i>Возникла непредвиденная ситуация с авто?</li>
-     <li><i class=\"fas fa-angle-double-right pr-4 text-orange-600 mt-4\"></i>Нужно срочно ехать?</li>
-     <li><i class=\"fas fa-angle-double-right pr-4 text-orange-600 mt-4\"></i>Предлагаем любую автопомощь!</li>
-     <li><i class=\"fas fa-angle-double-right pr-4 text-orange-600 mt-4\"></i>Приезжаем на место от 15 минут</li>
-     <li><i class=\"fas fa-angle-double-right pr-4 text-orange-600 mt-4\"></i>Работаем без посредников</li>
+     <li><i class=\"fas fa-angle-double-right pr-4 text-orange-600 mt-4\"></i>{% component 'contenteditor' file=\"home/list1.htm\"  tools=\"bold,italic\" class=\"\" %}</li>
+     <li><i class=\"fas fa-angle-double-right pr-4 text-orange-600 mt-4\"></i>{% component 'contenteditor' file=\"home/list2.htm\"  tools=\"bold,italic\" class=\"\" %}</li>
+     <li><i class=\"fas fa-angle-double-right pr-4 text-orange-600 mt-4\"></i>{% component 'contenteditor' file=\"home/list3.htm\"  tools=\"bold,italic\" class=\"\" %}</li>
+     <li><i class=\"fas fa-angle-double-right pr-4 text-orange-600 mt-4\"></i>{% component 'contenteditor' file=\"home/list4.htm\"  tools=\"bold,italic\" class=\"\" %}</li>
+     <li><i class=\"fas fa-angle-double-right pr-4 text-orange-600 mt-4\"></i>{% component 'contenteditor' file=\"home/list5.htm\"  tools=\"bold,italic\" class=\"\" %}</li>
      <button onclick=\"callMasterBtn()\" style=\"font-size: 16px;font-weight: 700;\" class=\"outline-none mt-16 mb-8 py-4 px-8 bg-blue-600 hover:bg-blue-700  transition duration-200\">Вызват мастера
      </button>  
        <!-- Root element for center items -->
@@ -760,7 +1085,7 @@ class __TwigTemplate_b619619f43acc9e530a220d780b2704acde1203f1aa0c1f36aa20de0271
  </div>
  </div>
  <div class=\"h-full w-full bg-white\">
-<div class=\"w-4/5 m-auto flex justify-center text-center flex-wrap items-center\">
+<div class=\"m-auto flex flex-wrap justify-center text-center items-center\">
     {% partial 'home/aboutus' %}
  </div>
  <div class=\"pb-16 h-full flex-col bg-blue-700 justify-between items-center mt-10\">
@@ -794,9 +1119,9 @@ class __TwigTemplate_b619619f43acc9e530a220d780b2704acde1203f1aa0c1f36aa20de0271
 <div class=\" mx-4 lg:mx-16 bg-white py-16\">
     <div class=\"flex items-center flex-wrap\">
         <div class=\"md:w-1/2 w-full\">
-     <p class=\"\">Как часто бывает, автомобиль ломается в самый неподходящий момент. Не каждый может починить машину самостоятельно, качественно и быстро. Не всегда под рукой окажутся инструменты или запчасти, требуемые для устранения неполадок. Специалисты компании «Автопомощь» в Спб могут исправить большинство поломок на месте.</p>
+     {% component 'contenteditor' file=\"home/text1.htm\" fixture=\"p\" tools=\"bold,italic\" class=\"\" %}
      <br>
-     <p class=\"\">Мы оказываем широкий спектр ремонтных услуг круглосуточно, имеет фиксированные цены, опытных и быстро реагирующих мастеров. Стоимость работы ниже рыночных на 10-20 %. Современные способы связи, с помощью которых можно четко определить объем работы, сокращают время ожидания. В отдельных случаях применяется эвакуация машины до места назначения.</p>
+     {% component 'contenteditor' file=\"home/text2.htm\" fixture=\"p\" tools=\"bold,italic\" class=\"\" %}
      </div>
      <img class=\"mt-6 md:w-1/2 w-full\" src=\"https://auto-help-spb.ru/assets/cache_image/images/one/index_585x361_721.jpg\" alt=\"\">   
  </div>
@@ -887,28 +1212,15 @@ class __TwigTemplate_b619619f43acc9e530a220d780b2704acde1203f1aa0c1f36aa20de0271
 <div class=\" bg-gray-100 py-12\">
  <div class=\"flex-col flex-wrap mx-4 md:mx-16 lg:mx-24\">
      <h1 class=\"title text-center font-extrabold text-xl md:text-2xl lg:text-4xl py-6\">
-         Профессиональная автопомощь на дороге
+        {% component 'contenteditor' file=\"home/title2.htm\" fixture=\"h1\" tools=\"bold,italic\" class=\"title text-center font-extrabold text-xl md:text-2xl lg:text-4xl py-6\" %}
      </h1>
      <div class=\"flex-row flex-wrap \">
          <div class=\"flex-col font-thin px-2  w-full\">
-         <p> 
-             Поломка транспортного средства влечет серьезные последствия и
-             для устранения не стоит пренебрегать помощью автомастера.
-         </p><br>
-         <p>
-             В работе должны быть четко выполнены мельчайшие детали, чтобы исключить повторные 
-             случаи. Ведь не всегда
-             пользователь может сразу определить возникшую проблему.
-         </p> <br>
+            {% component 'contenteditor' file=\"home/text4.htm\" fixture=\"p\" tools=\"bold,italic\" class=\"\" %}
          </div>
+         <br>
          <div class=\"flex-col font-thin px-2  w-full\">
-         <p>
-             Небольшие поломки часто скрывают серьезные нарушения в работе автомобиля, 
-             которые определит только профессионал.
-             Не стоит рисковать, вызов мастера – наилучшее решение для автолюбителя.
-         </p><br>
-         <p>
-             Звоните нам прямо сейчас +7 (906)703-11-11. Мастера во всех районах!
+            {% component 'contenteditor' file=\"home/text5.htm\" fixture=\"p\" tools=\"bold,italic\" class=\"\" %}
          </p>
          </div>
      </div>
@@ -931,9 +1243,9 @@ class __TwigTemplate_b619619f43acc9e530a220d780b2704acde1203f1aa0c1f36aa20de0271
 <div class=\"flex items-center justify-center\">
  <img src=\"https://auto-help-spb.ru/images/form-bg.jpg\" class=\"absolute w-full\" alt=\"\">
  <div style=\"z-index: 3;\" class=\"bg-white  lg:my-10  lg:w-11/12 text-center py-8\">
-     <h1 class=\"mt-6 mb-4 font-extrabold text-2xl\">Оставьте заявку</h1>
-     <p class=\"pb-4\">Можем предложить специальные условия именно для вас!</p>
-     <form action=\"\" class=\"flex lg:full  flex-wrap justify-evenly items-center\">
+     <!-- <h1 class=\"mt-6 mb-4 font-extrabold text-2xl\">Оставьте заявку</h1>
+     <p class=\"pb-4\">Можем предложить специальные условия именно для вас!</p> -->
+     <!-- <form action=\"\" class=\"flex lg:full  flex-wrap justify-evenly items-center\">
          <input class=\"bg-gray-300 p-2 pr-16 ml-4 outline-none m-4 lg:w-1/4\" type=\"text\" placeholder=\"Ваше имя\">
          <input class=\"bg-gray-300 p-2 pr-16 ml-4 outline-none m-4 lg:w-1/4\" type=\"tel\" placeholder=\"Ваш телефон*\">
          <div class=\"flex flex-wrap items-center justify-center lg:w-1/4\">
@@ -941,61 +1253,30 @@ class __TwigTemplate_b619619f43acc9e530a220d780b2704acde1203f1aa0c1f36aa20de0271
          <input class=\"hidden\" type=\"file\" id=\"file\">
          <label class=\"w-9/12 sm:w-full cursor-pointer mt-4 lg:mt-0\" for=\"file\"><i class=\"fas fa-paperclip mr-2\"></i>Прикрепить фото</label>
          </div>
-     </form>
+     </form> -->
+     {% component 'formSubscribe' %}
  </div>
 </div>
 <!-- Служба техпомощи компании section start -->
 <div class=\" bg-gray-100\">
- <div class=\"flex-col mx-4 md:mx-8 lg:mx-12 py-8 flex-wrap\">
-     <h1 class=\"text-center font-extrabold text-lg sm:text-2xl lg:text-4xl py-12\">
-         Служба техпомощи компании
-     </h1>
+ <div class=\"flex-col mx-4 md:mx-8 lg:mx-12 py-8 \">
+        {% component 'contenteditor' file=\"home/title3.htm\" fixture=\"h1\" tools=\"bold,italic\" class=\"text-center font-extrabold text-lg sm:text-2xl lg:text-4xl py-12\" %}
      <div class=\"flex mx-4 flex-wrap justify-center\">
-         <div class=\"flex-col font-thin text-sm md:text-lg\">
-         <p> 
-             Специалисты компании имеют многолетний опыт в техническом обслуживании автомобилей различных марок и моделей.
-              Они качественно выполняют следующие работы:
-         </p><br>
+         <div class=\"flex  flex-wrap font-thin text-sm md:text-lg\">
+            {% component 'contenteditor' file=\"home/text3.htm\" fixture=\"p\" tools=\"bold,italic\" class=\"\" %}
+         <br>
+         <!-- {% component 'contenteditor' file=\"home/list6.htm\" fixture=\"ul\" tools=\"bold,italic,ordered-list\" class=\"\" %} -->
          <ul class=\"pl-4\">
-             <li class=\"list-disc\"> Вскрытие багажника, капота или автомобиля;</li>
-             <li class=\"list-disc\">Запуск или замену аккумулятора;</li>
-             <li class=\"list-disc\">Устраняют поломки электроники или механические повреждения;</li>
-             <li class=\"list-disc\">Устраняют поломки электроники или механические повреждения;</li>
-             <li class=\"list-disc\">Услуги шиномонтажа (замена, ремонт или подкачка колес);</li>
-             <li class=\"list-disc\">Налаживание работы сигнализации, противоугонных систем;</li>
-             <li class=\"list-disc\">Запуск двигателя;</li>
-             <li class=\"list-disc\">Определение поломки на месте с последующим ее устранением;</li>
-             <li class=\"list-disc\">Проблемы с АКПП.</li>
+             {% component 'contenteditor' file=\"home/list6.htm\" fixture=\"\" tools=\"bold,italic,ordered-list\" class=\"list-disc\" %}
+
          </ul>
          <br>
-         <p>В компанию можно обратиться, если закончилось топливо или требуется вытащить автомобиль из ямы или кювета,
-              требуется транспортировка транспортного средства, при невозможности техпомощи на дороге.</p>
-              <h1 class=\"text-center font-extrabold text-lg sm:text-2xl lg:text-4xl py-12\">
-                 Способы связи
-             </h1>
-             <p>Чтобы получить быструю помощь на дорогах Спб и области, нужно связаться с диспетчером по телефонам 
-                 (позвонить или запросить обратный звонок),
-                  обратиться в мессенджер или оставить заявку на </p>
-         </div>
-         <div class=\"flex-col font-thin\">
-         <p>
-             сайте. Для скорого решения проблемы и определения стоимости работ следует приложить фото поломки.
-         </p><br>
-         <p>
-             Для клиентов доступны WhatsApp, Viber, Telegram, VK. Автомастер озвучит фиксированную цену работы,
-              при спорных вопросах стоимость определяется на месте мастером.
-         </p><br>
-         <p>В компании всегда найдется выгодное предложение для клиентов, ни одно обращение не останется без внимания.</p>
-         <h1 class=\"text-center font-extrabold text-lg sm:text-2xl lg:text-4xl py-12\">
-             Время важно!
-         </h1>
-         <p>Непредсказуемые проблемы в работе автомобиля заставляют изменить планы. 
-             Чтобы исключить возможные неудобства, диспетчер подбирает и отправляет на вызов мастера, ближайшего к месту поломки.
-              Грамотные и отлаженные действия сотрудников в кратчайшие сроки устранят поломку.</p><br>
-              <p>В компании работают мастера со стажем более 15 лет, знающие и легко разбирающиеся в современных, классических или эксклюзивных моделях автомобилей любых марок. 
-                  Они качественно и быстро окажут техпомощь на дорогах Спб.</p>
-                  <br>
-                  <p>Перечень предложенных услуг выполняют непосредственно сотрудники, что значительно сокращает время ожидания результата.</p>
+         {% component 'contenteditor' file=\"home/text6.htm\" fixture=\"p\" tools=\"bold,italic\" class=\"\" %}
+                {% component 'contenteditor' file=\"home/title4.htm\" fixture=\"h1\" tools=\"bold,italic\" class=\"text-center font-extrabold text-lg sm:text-2xl lg:text-4xl py-12 m-auto\" %}
+                {% component 'contenteditor' file=\"home/text7.htm\" fixture=\"p\" tools=\"bold,italic\" class=\"\" %}
+                {% component 'contenteditor' file=\"home/title4.htm\" fixture=\"h1\" tools=\"bold,italic\" class=\"text-center font-extrabold text-lg sm:text-2xl lg:text-4xl py-12 m-auto\" %}
+                {% component 'contenteditor' file=\"home/text8.htm\" fixture=\"p\" tools=\"bold,italic\" class=\"\" %}
+
          </div>
      </div>
  </div>
@@ -1025,7 +1306,7 @@ class __TwigTemplate_b619619f43acc9e530a220d780b2704acde1203f1aa0c1f36aa20de0271
      <div class=\"w-96 lg:w-1/2 flex-col bg-white justify-between items-center text-center py-10 my-10\">
          <h1 class=\"font-extrabold text-2xl\">Оставьте заявку</h1>
          <p>Можем предложить специальные условия именно для вас!</p>
-         <form action=\"\" class=\"flex-col\">
+         <!-- <form action=\"\" class=\"flex-col\">
              <input class=\"bg-gray-300 w-96 md:w-1/2 mt-4 p-2\" type=\"text\" placeholder=\"Ваше имя\" required />
              <input class=\"bg-gray-300 w-96 md:w-1/2 mt-4 p-2\" type=\"tel\" placeholder=\"Ваш телефон*\" required />
              <textarea class=\"bg-gray-300 w-96 md:w-1/2 mt-4 p-2\" cols=\"30\" rows=\"10\" placeholder=\"Комментарий\"></textarea>
@@ -1035,7 +1316,8 @@ class __TwigTemplate_b619619f43acc9e530a220d780b2704acde1203f1aa0c1f36aa20de0271
              </div>
              <input class=\"cursor-pointer w-96 md:w-1/2 bg-blue-700 text-white mt-2 hover:bg-blue-900 p-2 lg:mt-5 px-6 outline-none\" type=\"submit\" value=\"Узнать стоимость\">  
              </div>
-         </form>
+         </form> -->
+         {% component 'commentsPost' %}
      </div>
  </div>
 </div>", "E:\\openserver\\domains\\auto/themes/auto/pages/home.htm", "");

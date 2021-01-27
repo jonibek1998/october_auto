@@ -29,13 +29,13 @@ class __TwigTemplate_3f55e05ba530b8075611d8a49736374cbb87449838f25851fd87aa3c377
         $this->blocks = [
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
-        $tags = array("set" => 299, "for" => 307);
+        $tags = array("set" => 299, "for" => 307, "component" => 330);
         $filters = array("page" => 93, "raw" => 310, "escape" => 312, "date" => 313);
         $functions = array();
 
         try {
             $this->sandbox->checkSecurity(
-                ['set', 'for'],
+                ['set', 'for', 'component'],
                 ['page', 'raw', 'escape', 'date'],
                 []
             );
@@ -181,54 +181,78 @@ class __TwigTemplate_3f55e05ba530b8075611d8a49736374cbb87449838f25851fd87aa3c377
                     <div style=\"width: 90vw; top: 70px;\" class=\"nav-submenu z-10  p-6 bg-gray-100 hidden absolute left-0\">
                         <ul class=\" flex flex-wrap items-center justify-evenly\">
                             <li class=\" relative flex m-2 w-1/5\">
-                                <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                <a href=\"";
+        // line 120
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("service1");
+        echo "\" class=\" flex items-center text-black hover:text-orange-500\">
                                     <i class=\"mr-2\">
                                         <img src=\"https://auto-help-spb.ru/images/avtohelp.png\" alt=\"\" class=\"w-10\">
                                     </i>Автомобильная помощь</a>
                             </li>
                             <li class=\" relative flex m-2 w-1/5\">
-                                    <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                    <a href=\"";
+        // line 126
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("service1");
+        echo "\" class=\" flex items-center text-black hover:text-orange-500\">
                                      <i class=\"mr-2\">
                                         <img src=\"https://auto-help-spb.ru/images/autopsy-car.png\" alt alt=\"\" class=\"w-10\">
                                     </i>Вскрытие авто</a>
                             </li>
                              <li class=\" relative flex m-2 w-1/5\">
-                                <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                <a href=\"";
+        // line 132
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("service2");
+        echo "\" class=\" flex items-center text-black hover:text-orange-500\">
                                     <i class=\"mr-2\">
                                         <img src=\"https://auto-help-spb.ru/images/opening-hood.png\" alt alt=\"\" class=\"w-10\">
                                     </i>Вскрытие капота</a>
                             </li>
                             <li class=\" relative flex m-2 w-1/5\">
-                                <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                <a href=\"";
+        // line 138
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("service3");
+        echo "\" class=\" flex items-center text-black hover:text-orange-500\">
                                     <i class=\"mr-2\">
                                         <img src=\"https://auto-help-spb.ru/images/opening-trunk.png\" alt alt=\"\" class=\"w-10\">
                                     </i>Вскрытие багажника</a>
                             </li>
                             <li class=\" relative flex m-2 w-1/5\">
-                                    <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                    <a href=\"";
+        // line 144
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("service4");
+        echo "\" class=\" flex items-center text-black hover:text-orange-500\">
                                     <i class=\"mr-2\">
                                         <img src=\"https://auto-help-spb.ru/images/menu-1.svg\" alt=\"\" class=\"w-10\">
                                     </i>Прикурить аккумулятор</a>
                             </li>
                             <li class=\" relative flex m-2 w-1/5\">
-                                <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                <a href=\"";
+        // line 150
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("service5");
+        echo "\" class=\" flex items-center text-black hover:text-orange-500\">
                                     <i class=\"mr-2\">
                                         <img src=\"https://auto-help-spb.ru/images/menu-11.svg \" alt alt=\"\" class=\"w-10\">
                                     </i>Замена АКБ</a>
                             </li>
                             <li class=\" relative flex m-2 w-1/5 avto\">
-                                <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                <a href=\"";
+        // line 156
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("service6");
+        echo "\" class=\" flex items-center text-black hover:text-orange-500\">
                                     <i class=\"mr-2\">
                                         <img src=\"https://auto-help-spb.ru/images/menu-4.svg \" alt=\"\" class=\"w-10\">
                                     </i>Автоэлектрик с <br> выездом</a>
                             </li>
                             <li class=\" relative flex m-2 w-1/5\">
-                                <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                <a href=\"";
+        // line 162
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("service7");
+        echo "\" class=\" flex items-center text-black hover:text-orange-500\">
                                     <i class=\"mr-2\">
                                         <img src=\"https://auto-help-spb.ru/images/car-mechanic-with-departure.png \" alt=\"\" class=\"w-10\">
                                     </i>Автомеханик с выездом</a>
                             </li>
-                            <li class=\" relative flex m-2 w-1/5\">
+                            <!-- <li class=\" relative flex m-2 w-1/5\">
                                 <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
                                     <i class=\"mr-2\">
                                         <img src=\"https://auto-help-spb.ru/images/menu-5.svg\" alt=\"\" class=\"w-10\">
@@ -279,9 +303,9 @@ class __TwigTemplate_3f55e05ba530b8075611d8a49736374cbb87449838f25851fd87aa3c377
                                         <img src=\"https://auto-help-spb.ru/images/menu-8.svg\" alt=\"\" class=\"w-10\">
                                     </i>Разблокировка АКПП
                                 </a>
-                            </li>
-                        </ul>
-                        </div>
+                            </li> -->
+                         </ul>
+                    </div>
            
                     </li>
                             </li> 
@@ -434,18 +458,13 @@ class __TwigTemplate_3f55e05ba530b8075611d8a49736374cbb87449838f25851fd87aa3c377
         <div class=\"w-96 lg:w-1/2 flex-col bg-white justify-between items-center text-center py-10 my-10\">
             <h1 class=\"font-extrabold text-2xl\">Оставьте заявку</h1>
             <p>Можем предложить специальные условия именно для вас!</p>
-            <form action=\"\" class=\"flex-col\">
-                <input class=\"bg-gray-300 w-96 md:w-1/2 mt-4 p-2\" type=\"text\" placeholder=\"Ваше имя\" required />
-                <input class=\"bg-gray-300 w-96 md:w-1/2 mt-4 p-2\" type=\"tel\" placeholder=\"Ваш телефон*\" required />
-                <textarea class=\"bg-gray-300 w-96 md:w-1/2 mt-4 p-2\" cols=\"30\" rows=\"10\" placeholder=\"Комментарий\"></textarea>
-                <div class=\"flex text-center justify-center items-center cursor-pointer\">
-                <input class=\"hidden\" type=\"file\" id=\"upload\">
-                <label class=\"cursor-pointer\" for=\"upload\"><i class=\"fas fa-paperclip mr-2 cursor-pointer\"></i>Прикрепить фото</label>
-                </div>
-                <input class=\"cursor-pointer w-96 md:w-1/2 bg-blue-700 text-white mt-2 hover:bg-blue-900 p-2 lg:mt-5 px-6 outline-none\" type=\"submit\" value=\"Узнать стоимость\">  
-                </div>
-            </form>
-        </div>
+            ";
+        // line 330
+        $context['__cms_component_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("commentsPost"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        // line 331
+        echo "        </div>
     </div>
 </div>";
     }
@@ -462,7 +481,7 @@ class __TwigTemplate_3f55e05ba530b8075611d8a49736374cbb87449838f25851fd87aa3c377
 
     public function getDebugInfo()
     {
-        return array (  425 => 318,  416 => 316,  408 => 313,  404 => 312,  399 => 310,  395 => 308,  390 => 307,  386 => 305,  384 => 304,  382 => 303,  380 => 302,  378 => 301,  376 => 300,  374 => 299,  298 => 226,  294 => 225,  290 => 224,  156 => 93,  62 => 1,);
+        return array (  467 => 331,  463 => 330,  449 => 318,  440 => 316,  432 => 313,  428 => 312,  423 => 310,  419 => 308,  414 => 307,  410 => 305,  408 => 304,  406 => 303,  404 => 302,  402 => 301,  400 => 300,  398 => 299,  322 => 226,  318 => 225,  314 => 224,  249 => 162,  240 => 156,  231 => 150,  222 => 144,  213 => 138,  204 => 132,  195 => 126,  186 => 120,  156 => 93,  62 => 1,);
     }
 
     public function getSourceContext()
@@ -586,54 +605,54 @@ class __TwigTemplate_3f55e05ba530b8075611d8a49736374cbb87449838f25851fd87aa3c377
                     <div style=\"width: 90vw; top: 70px;\" class=\"nav-submenu z-10  p-6 bg-gray-100 hidden absolute left-0\">
                         <ul class=\" flex flex-wrap items-center justify-evenly\">
                             <li class=\" relative flex m-2 w-1/5\">
-                                <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                <a href=\"{{ 'service1'|page }}\" class=\" flex items-center text-black hover:text-orange-500\">
                                     <i class=\"mr-2\">
                                         <img src=\"https://auto-help-spb.ru/images/avtohelp.png\" alt=\"\" class=\"w-10\">
                                     </i>Автомобильная помощь</a>
                             </li>
                             <li class=\" relative flex m-2 w-1/5\">
-                                    <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                    <a href=\"{{ 'service1'|page }}\" class=\" flex items-center text-black hover:text-orange-500\">
                                      <i class=\"mr-2\">
                                         <img src=\"https://auto-help-spb.ru/images/autopsy-car.png\" alt alt=\"\" class=\"w-10\">
                                     </i>Вскрытие авто</a>
                             </li>
                              <li class=\" relative flex m-2 w-1/5\">
-                                <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                <a href=\"{{ 'service2'|page }}\" class=\" flex items-center text-black hover:text-orange-500\">
                                     <i class=\"mr-2\">
                                         <img src=\"https://auto-help-spb.ru/images/opening-hood.png\" alt alt=\"\" class=\"w-10\">
                                     </i>Вскрытие капота</a>
                             </li>
                             <li class=\" relative flex m-2 w-1/5\">
-                                <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                <a href=\"{{ 'service3'|page }}\" class=\" flex items-center text-black hover:text-orange-500\">
                                     <i class=\"mr-2\">
                                         <img src=\"https://auto-help-spb.ru/images/opening-trunk.png\" alt alt=\"\" class=\"w-10\">
                                     </i>Вскрытие багажника</a>
                             </li>
                             <li class=\" relative flex m-2 w-1/5\">
-                                    <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                    <a href=\"{{ 'service4'|page }}\" class=\" flex items-center text-black hover:text-orange-500\">
                                     <i class=\"mr-2\">
                                         <img src=\"https://auto-help-spb.ru/images/menu-1.svg\" alt=\"\" class=\"w-10\">
                                     </i>Прикурить аккумулятор</a>
                             </li>
                             <li class=\" relative flex m-2 w-1/5\">
-                                <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                <a href=\"{{ 'service5'|page }}\" class=\" flex items-center text-black hover:text-orange-500\">
                                     <i class=\"mr-2\">
                                         <img src=\"https://auto-help-spb.ru/images/menu-11.svg \" alt alt=\"\" class=\"w-10\">
                                     </i>Замена АКБ</a>
                             </li>
                             <li class=\" relative flex m-2 w-1/5 avto\">
-                                <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                <a href=\"{{ 'service6'|page }}\" class=\" flex items-center text-black hover:text-orange-500\">
                                     <i class=\"mr-2\">
                                         <img src=\"https://auto-help-spb.ru/images/menu-4.svg \" alt=\"\" class=\"w-10\">
                                     </i>Автоэлектрик с <br> выездом</a>
                             </li>
                             <li class=\" relative flex m-2 w-1/5\">
-                                <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
+                                <a href=\"{{ 'service7'|page }}\" class=\" flex items-center text-black hover:text-orange-500\">
                                     <i class=\"mr-2\">
                                         <img src=\"https://auto-help-spb.ru/images/car-mechanic-with-departure.png \" alt=\"\" class=\"w-10\">
                                     </i>Автомеханик с выездом</a>
                             </li>
-                            <li class=\" relative flex m-2 w-1/5\">
+                            <!-- <li class=\" relative flex m-2 w-1/5\">
                                 <a href=\"#\" class=\" flex items-center text-black hover:text-orange-500\">
                                     <i class=\"mr-2\">
                                         <img src=\"https://auto-help-spb.ru/images/menu-5.svg\" alt=\"\" class=\"w-10\">
@@ -684,9 +703,9 @@ class __TwigTemplate_3f55e05ba530b8075611d8a49736374cbb87449838f25851fd87aa3c377
                                         <img src=\"https://auto-help-spb.ru/images/menu-8.svg\" alt=\"\" class=\"w-10\">
                                     </i>Разблокировка АКПП
                                 </a>
-                            </li>
-                        </ul>
-                        </div>
+                            </li> -->
+                         </ul>
+                    </div>
            
                     </li>
                             </li> 
@@ -796,17 +815,7 @@ class __TwigTemplate_3f55e05ba530b8075611d8a49736374cbb87449838f25851fd87aa3c377
         <div class=\"w-96 lg:w-1/2 flex-col bg-white justify-between items-center text-center py-10 my-10\">
             <h1 class=\"font-extrabold text-2xl\">Оставьте заявку</h1>
             <p>Можем предложить специальные условия именно для вас!</p>
-            <form action=\"\" class=\"flex-col\">
-                <input class=\"bg-gray-300 w-96 md:w-1/2 mt-4 p-2\" type=\"text\" placeholder=\"Ваше имя\" required />
-                <input class=\"bg-gray-300 w-96 md:w-1/2 mt-4 p-2\" type=\"tel\" placeholder=\"Ваш телефон*\" required />
-                <textarea class=\"bg-gray-300 w-96 md:w-1/2 mt-4 p-2\" cols=\"30\" rows=\"10\" placeholder=\"Комментарий\"></textarea>
-                <div class=\"flex text-center justify-center items-center cursor-pointer\">
-                <input class=\"hidden\" type=\"file\" id=\"upload\">
-                <label class=\"cursor-pointer\" for=\"upload\"><i class=\"fas fa-paperclip mr-2 cursor-pointer\"></i>Прикрепить фото</label>
-                </div>
-                <input class=\"cursor-pointer w-96 md:w-1/2 bg-blue-700 text-white mt-2 hover:bg-blue-900 p-2 lg:mt-5 px-6 outline-none\" type=\"submit\" value=\"Узнать стоимость\">  
-                </div>
-            </form>
+            {% component 'commentsPost' %}
         </div>
     </div>
 </div>", "E:\\openserver\\domains\\auto/themes/auto/pages/reviews.htm", "");

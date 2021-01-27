@@ -67,7 +67,7 @@ class __TwigTemplate_f2786a7b38bcef23c8cd8a25df50d1639cf2dd9b8026a3e0085475a2783
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["post"]) {
             // line 3
-            echo "    <div class=\" my-8 flex ml-4 flex-col items-center justify-evenly\">
+            echo "    <div class=\"w-full sm:w-1/3 lg:w-1/5 my-8 flex ml-4 flex-col items-center justify-evenly\">
         ";
             // line 4
             $context['_parent'] = $context;
@@ -125,7 +125,7 @@ class __TwigTemplate_f2786a7b38bcef23c8cd8a25df50d1639cf2dd9b8026a3e0085475a2783
     {
         return new Source("{% set posts = blogPosts.posts %}
     {% for post in posts %}
-    <div class=\" my-8 flex ml-4 flex-col items-center justify-evenly\">
+    <div class=\"w-full sm:w-1/3 lg:w-1/5 my-8 flex ml-4 flex-col items-center justify-evenly\">
         {% for image in post.featured_images|slice(0, 1) %}
         <img src=\"{{ image.path }}\" alt=\"\">
         {% endfor %}

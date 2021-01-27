@@ -1,7 +1,10 @@
-1611657544a:1:{s:8:"home.htm";a:10:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:37143:"title = "Home"
+1611734463a:1:{s:8:"home.htm";a:16:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:39100:"title = "Home"
 url = "/"
 layout = "default"
+meta_title = "Home"
 is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
 
 [builderList]
 modelClass = "John\Priceservice\Models\PriceService"
@@ -9,10 +12,21 @@ scope = "-"
 scopeValue = "{{ :scope }}"
 displayColumn = "slug"
 noRecordsMessage = "No records found"
-detailsPage = "-"
+detailsPage = "service"
 detailsKeyColumn = "slug"
 detailsUrlParameter = "slug"
 pageNumber = "{{ :page }}"
+
+[contenteditor]
+
+[commentsPost]
+
+[formSubscribe]
+urlToUnsubscribe = "unsubscribe"
+urlToProfile = "subscriber-profile"
+geo = "disabled"
+thanksMessage = "Thanks for subscribe!"
+errorMessage = "Thanks for subscribe!"
 ==
 <div>
     <img style="height: 220vh; filter: brightness(30%);   z-index: -2;" class="absolute bg-auto bg-cover bg-contain" src="https://auto-help-spb.ru/images/top/index.jpg" alt="">
@@ -64,16 +78,17 @@ pageNumber = "{{ :page }}"
              </a>
                  <div class='hidden lg:flex w-96'>
                  <i class="fas fa-map-marker-alt pr-2"></i>
-                 <p>Работаем по Москву</p>
+                 {% component 'contenteditor' file="home/head1.htm" fixture="p" tools="bold,italic" class="" %}
              </div>
              <div class='flex hidden lg:flex w-96'>
                  <i class="fas fa-clock pr-2"></i>
-                 <p>Работаем 24 часа</p>
+                 {% component 'contenteditor' file="home/head2.htm" fixture="p" tools="bold,italic" class="" %}
              </div>
              <div class='flex w-96'>
                  <i class="fas fa-phone-alt pr-2"></i>
                  <div class="flex-col text-xs md:text-base">
-                 <a class="hover:text-blue-500" href="tel:+79067031111">+7 (906)703-11-11</a>
+                 <!-- <a class="hover:text-blue-500" href="tel:+79067031111">+7 (906)703-11-11</a> -->
+                 {% component 'contenteditor' file="home/head3.htm" fixture="a" tools="bold,italic" class="hover:text-blue-500" %}
                  </div>
              </div>
          </div>
@@ -86,25 +101,106 @@ pageNumber = "{{ :page }}"
                      <img src="https://auto-help-spb.ru/images/menu-arrow.svg" alt="">
                      <div style="width: 90vw; top: 70px;" class="nav-submenu z-10  p-6 bg-gray-100 hidden absolute left-0">
                          <ul class=" flex flex-wrap items-center justify-evenly">
-                            
-                            {% set records = builderList.records %}
-                            {% set displayColumn = builderList.displayColumn %}
-                            {% set noRecordsMessage = builderList.noRecordsMessage %}
-                            {% set detailsPage = builderList.detailsPage %}
-                            {% set detailsKeyColumn = builderList.detailsKeyColumn %}
-                            {% set detailsUrlParameter = builderList.detailsUrlParameter %}
-                            
-                           
-                            {% for record in records %}
-                             <li class=" relative flex m-2 w-1/5">
-                                 <a href="#" class=" flex items-center text-black hover:text-orange-500">
+                            <li class=" relative flex m-2 w-1/5">
+                                <a href="{{ 'service1'|page }}" class=" flex items-center text-black hover:text-orange-500">
+                                    <i class="mr-2">
+                                        <img src="https://auto-help-spb.ru/images/avtohelp.png" alt="" class="w-10">
+                                    </i>Автомобильная помощь</a>
+                            </li>
+                            <li class=" relative flex m-2 w-1/5">
+                                    <a href="{{ 'service1'|page }}" class=" flex items-center text-black hover:text-orange-500">
                                      <i class="mr-2">
-                                         <img src="{{ record.icon|media }}" alt="" class="w-10">
-                                     </i>{{ record.title }}</a>
-                             </li>
-                             {% else %}
-                                    <li class="no-data">{{ noRecordsMessage }}</li>
-                            {% endfor %}
+                                        <img src="https://auto-help-spb.ru/images/autopsy-car.png" alt alt="" class="w-10">
+                                    </i>Вскрытие авто</a>
+                            </li>
+                             <li class=" relative flex m-2 w-1/5">
+                                <a href="{{ 'service2'|page }}" class=" flex items-center text-black hover:text-orange-500">
+                                    <i class="mr-2">
+                                        <img src="https://auto-help-spb.ru/images/opening-hood.png" alt alt="" class="w-10">
+                                    </i>Вскрытие капота</a>
+                            </li>
+                            <li class=" relative flex m-2 w-1/5">
+                                <a href="{{ 'service3'|page }}" class=" flex items-center text-black hover:text-orange-500">
+                                    <i class="mr-2">
+                                        <img src="https://auto-help-spb.ru/images/opening-trunk.png" alt alt="" class="w-10">
+                                    </i>Вскрытие багажника</a>
+                            </li>
+                            <li class=" relative flex m-2 w-1/5">
+                                    <a href="{{ 'service4'|page }}" class=" flex items-center text-black hover:text-orange-500">
+                                    <i class="mr-2">
+                                        <img src="https://auto-help-spb.ru/images/menu-1.svg" alt="" class="w-10">
+                                    </i>Прикурить аккумулятор</a>
+                            </li>
+                            <li class=" relative flex m-2 w-1/5">
+                                <a href="{{ 'service5'|page }}" class=" flex items-center text-black hover:text-orange-500">
+                                    <i class="mr-2">
+                                        <img src="https://auto-help-spb.ru/images/menu-11.svg " alt alt="" class="w-10">
+                                    </i>Замена АКБ</a>
+                            </li>
+                            <li class=" relative flex m-2 w-1/5 avto">
+                                <a href="{{ 'service6'|page }}" class=" flex items-center text-black hover:text-orange-500">
+                                    <i class="mr-2">
+                                        <img src="https://auto-help-spb.ru/images/menu-4.svg " alt="" class="w-10">
+                                    </i>Автоэлектрик с <br> выездом</a>
+                            </li>
+                            <li class=" relative flex m-2 w-1/5">
+                                <a href="{{ 'service7'|page }}" class=" flex items-center text-black hover:text-orange-500">
+                                    <i class="mr-2">
+                                        <img src="https://auto-help-spb.ru/images/car-mechanic-with-departure.png " alt="" class="w-10">
+                                    </i>Автомеханик с выездом</a>
+                            </li>
+                            <!-- <li class=" relative flex m-2 w-1/5">
+                                <a href="#" class=" flex items-center text-black hover:text-orange-500">
+                                    <i class="mr-2">
+                                        <img src="https://auto-help-spb.ru/images/menu-5.svg" alt="" class="w-10">
+                                    </i>Вытащить машину</a>
+                            </li>
+                            <li class=" relative flex m-2 w-1/5 mr-15">
+                                <a href="#" class=" flex items-center text-black hover:text-orange-500">
+                                    <i class="mr-2">
+                                        <img src=" https://auto-help-spb.ru/images/menu-10.svg" alt alt="" class="w-10">
+                                    </i>Ремонт, замена и <br> подкачка колёс</a>
+                            </li>
+                            <li class=" relative flex m-2 w-1/5">
+                                <a href="#" class=" flex items-center text-black hover:text-orange-500">
+                                    <i class="mr-2">
+                                        <img src="https://auto-help-spb.ru/images/vehicle-diagnostics.png"  alt="" class="w-10">
+                                     </i>Диагностика <br> автомобиля</a>
+                            </li>
+                            <li class=" relative flex m-2 w-1/5">
+                                <a href="#" class=" flex items-center text-black hover:text-orange-500">
+                                        <i class="mr-2">
+                                            <img src="https://auto-help-spb.ru/images/alarm-repair-and-deactivation.png " alt="" class="w-10">
+                                        </i>Ремонт и отключение <br> сигнализации</a>
+                            </li>
+                            <li class=" relative flex m-2 w-1/5">
+                                <a href="#" class=" flex items-center text-black hover:text-orange-500">
+                                    <i class="mr-2">
+                                        <img src="https://auto-help-spb.ru/images/menu-2.svg" alt="" class="w-10">
+                                    </i>Подвоз топлива
+                                </a>
+                            </li>
+                            <li class=" relative flex m-2 w-1/5">
+                                <a href="#" class=" flex items-center text-black hover:text-orange-500">
+                                    <i class="mr-2">
+                                        <img src="https://auto-help-spb.ru/images/engine-start.png" alt="" class="w-10">
+                                    </i>Запуск двигателя
+                                </a>
+                            </li>
+                            <li class=" relative flex m-2 w-1/5">
+                                <a href="#" class=" flex items-center text-black hover:text-orange-500">
+                                    <i class="mr-2">
+                                        <img src="https://auto-help-spb.ru/images/menu-7.svg " alt="" class="w-10">
+                                    </i>Буксировка автомобиля
+                                </a>
+                            </li>
+                            <li class=" relative flex m-2 w-1/5">
+                                <a href="#" class=" flex items-center text-black hover:text-orange-500">
+                                    <i class="mr-2">
+                                        <img src="https://auto-help-spb.ru/images/menu-8.svg" alt="" class="w-10">
+                                    </i>Разблокировка АКПП
+                                </a>
+                            </li> -->
                          </ul>
                          </div>
             
@@ -119,15 +215,15 @@ pageNumber = "{{ :page }}"
          </div>
  </header>
  <div class="header font-bold lg:text-5xl md:text-3xl text-xl mt-16 mx-6 md:mx-24">
- <h1 class="text-white">АВТОМОБИЛЬНАЯ ПОМОЩЬ НА ДОРОГЕ В МОСКВЕ</h1>
- <h1 class="text-white"> ОТ <span class="text-orange-600"> 500 РУБЛЕЙ </span></h1>
+ {% component 'contenteditor' file="home/title.htm" fixture="h1" tools="bold,italic" class="text-white" %}
+ <h1 class="text-white"> ОТ {% component 'contenteditor' file="home/price.htm" fixture="span" tools="bold,italic" class="text-orange-600" %}</h1>
  </div>
  <ul class="text-sm md:text-lg lg:xl flex-col items-center justify-evenly text-white mt-10 mx-6 md:mx-24">
-     <li><i class="fas fa-angle-double-right pr-4 text-orange-600 mt-4"></i>Возникла непредвиденная ситуация с авто?</li>
-     <li><i class="fas fa-angle-double-right pr-4 text-orange-600 mt-4"></i>Нужно срочно ехать?</li>
-     <li><i class="fas fa-angle-double-right pr-4 text-orange-600 mt-4"></i>Предлагаем любую автопомощь!</li>
-     <li><i class="fas fa-angle-double-right pr-4 text-orange-600 mt-4"></i>Приезжаем на место от 15 минут</li>
-     <li><i class="fas fa-angle-double-right pr-4 text-orange-600 mt-4"></i>Работаем без посредников</li>
+     <li><i class="fas fa-angle-double-right pr-4 text-orange-600 mt-4"></i>{% component 'contenteditor' file="home/list1.htm"  tools="bold,italic" class="" %}</li>
+     <li><i class="fas fa-angle-double-right pr-4 text-orange-600 mt-4"></i>{% component 'contenteditor' file="home/list2.htm"  tools="bold,italic" class="" %}</li>
+     <li><i class="fas fa-angle-double-right pr-4 text-orange-600 mt-4"></i>{% component 'contenteditor' file="home/list3.htm"  tools="bold,italic" class="" %}</li>
+     <li><i class="fas fa-angle-double-right pr-4 text-orange-600 mt-4"></i>{% component 'contenteditor' file="home/list4.htm"  tools="bold,italic" class="" %}</li>
+     <li><i class="fas fa-angle-double-right pr-4 text-orange-600 mt-4"></i>{% component 'contenteditor' file="home/list5.htm"  tools="bold,italic" class="" %}</li>
      <button onclick="callMasterBtn()" style="font-size: 16px;font-weight: 700;" class="outline-none mt-16 mb-8 py-4 px-8 bg-blue-600 hover:bg-blue-700  transition duration-200">Вызват мастера
      </button>  
        <!-- Root element for center items -->
@@ -183,7 +279,7 @@ pageNumber = "{{ :page }}"
  </div>
  </div>
  <div class="h-full w-full bg-white">
-<div class="w-4/5 m-auto flex justify-center text-center flex-wrap items-center">
+<div class="m-auto flex flex-wrap justify-center text-center items-center">
     {% partial 'home/aboutus' %}
  </div>
  <div class="pb-16 h-full flex-col bg-blue-700 justify-between items-center mt-10">
@@ -217,9 +313,9 @@ pageNumber = "{{ :page }}"
 <div class=" mx-4 lg:mx-16 bg-white py-16">
     <div class="flex items-center flex-wrap">
         <div class="md:w-1/2 w-full">
-     <p class="">Как часто бывает, автомобиль ломается в самый неподходящий момент. Не каждый может починить машину самостоятельно, качественно и быстро. Не всегда под рукой окажутся инструменты или запчасти, требуемые для устранения неполадок. Специалисты компании «Автопомощь» в Спб могут исправить большинство поломок на месте.</p>
+     {% component 'contenteditor' file="home/text1.htm" fixture="p" tools="bold,italic" class="" %}
      <br>
-     <p class="">Мы оказываем широкий спектр ремонтных услуг круглосуточно, имеет фиксированные цены, опытных и быстро реагирующих мастеров. Стоимость работы ниже рыночных на 10-20 %. Современные способы связи, с помощью которых можно четко определить объем работы, сокращают время ожидания. В отдельных случаях применяется эвакуация машины до места назначения.</p>
+     {% component 'contenteditor' file="home/text2.htm" fixture="p" tools="bold,italic" class="" %}
      </div>
      <img class="mt-6 md:w-1/2 w-full" src="https://auto-help-spb.ru/assets/cache_image/images/one/index_585x361_721.jpg" alt="">   
  </div>
@@ -310,28 +406,15 @@ pageNumber = "{{ :page }}"
 <div class=" bg-gray-100 py-12">
  <div class="flex-col flex-wrap mx-4 md:mx-16 lg:mx-24">
      <h1 class="title text-center font-extrabold text-xl md:text-2xl lg:text-4xl py-6">
-         Профессиональная автопомощь на дороге
+        {% component 'contenteditor' file="home/title2.htm" fixture="h1" tools="bold,italic" class="title text-center font-extrabold text-xl md:text-2xl lg:text-4xl py-6" %}
      </h1>
      <div class="flex-row flex-wrap ">
          <div class="flex-col font-thin px-2  w-full">
-         <p> 
-             Поломка транспортного средства влечет серьезные последствия и
-             для устранения не стоит пренебрегать помощью автомастера.
-         </p><br>
-         <p>
-             В работе должны быть четко выполнены мельчайшие детали, чтобы исключить повторные 
-             случаи. Ведь не всегда
-             пользователь может сразу определить возникшую проблему.
-         </p> <br>
+            {% component 'contenteditor' file="home/text4.htm" fixture="p" tools="bold,italic" class="" %}
          </div>
+         <br>
          <div class="flex-col font-thin px-2  w-full">
-         <p>
-             Небольшие поломки часто скрывают серьезные нарушения в работе автомобиля, 
-             которые определит только профессионал.
-             Не стоит рисковать, вызов мастера – наилучшее решение для автолюбителя.
-         </p><br>
-         <p>
-             Звоните нам прямо сейчас +7 (906)703-11-11. Мастера во всех районах!
+            {% component 'contenteditor' file="home/text5.htm" fixture="p" tools="bold,italic" class="" %}
          </p>
          </div>
      </div>
@@ -354,9 +437,9 @@ pageNumber = "{{ :page }}"
 <div class="flex items-center justify-center">
  <img src="https://auto-help-spb.ru/images/form-bg.jpg" class="absolute w-full" alt="">
  <div style="z-index: 3;" class="bg-white  lg:my-10  lg:w-11/12 text-center py-8">
-     <h1 class="mt-6 mb-4 font-extrabold text-2xl">Оставьте заявку</h1>
-     <p class="pb-4">Можем предложить специальные условия именно для вас!</p>
-     <form action="" class="flex lg:full  flex-wrap justify-evenly items-center">
+     <!-- <h1 class="mt-6 mb-4 font-extrabold text-2xl">Оставьте заявку</h1>
+     <p class="pb-4">Можем предложить специальные условия именно для вас!</p> -->
+     <!-- <form action="" class="flex lg:full  flex-wrap justify-evenly items-center">
          <input class="bg-gray-300 p-2 pr-16 ml-4 outline-none m-4 lg:w-1/4" type="text" placeholder="Ваше имя">
          <input class="bg-gray-300 p-2 pr-16 ml-4 outline-none m-4 lg:w-1/4" type="tel" placeholder="Ваш телефон*">
          <div class="flex flex-wrap items-center justify-center lg:w-1/4">
@@ -364,61 +447,30 @@ pageNumber = "{{ :page }}"
          <input class="hidden" type="file" id="file">
          <label class="w-9/12 sm:w-full cursor-pointer mt-4 lg:mt-0" for="file"><i class="fas fa-paperclip mr-2"></i>Прикрепить фото</label>
          </div>
-     </form>
+     </form> -->
+     {% component 'formSubscribe' %}
  </div>
 </div>
 <!-- Служба техпомощи компании section start -->
 <div class=" bg-gray-100">
- <div class="flex-col mx-4 md:mx-8 lg:mx-12 py-8 flex-wrap">
-     <h1 class="text-center font-extrabold text-lg sm:text-2xl lg:text-4xl py-12">
-         Служба техпомощи компании
-     </h1>
+ <div class="flex-col mx-4 md:mx-8 lg:mx-12 py-8 ">
+        {% component 'contenteditor' file="home/title3.htm" fixture="h1" tools="bold,italic" class="text-center font-extrabold text-lg sm:text-2xl lg:text-4xl py-12" %}
      <div class="flex mx-4 flex-wrap justify-center">
-         <div class="flex-col font-thin text-sm md:text-lg">
-         <p> 
-             Специалисты компании имеют многолетний опыт в техническом обслуживании автомобилей различных марок и моделей.
-              Они качественно выполняют следующие работы:
-         </p><br>
+         <div class="flex  flex-wrap font-thin text-sm md:text-lg">
+            {% component 'contenteditor' file="home/text3.htm" fixture="p" tools="bold,italic" class="" %}
+         <br>
+         <!-- {% component 'contenteditor' file="home/list6.htm" fixture="ul" tools="bold,italic,ordered-list" class="" %} -->
          <ul class="pl-4">
-             <li class="list-disc"> Вскрытие багажника, капота или автомобиля;</li>
-             <li class="list-disc">Запуск или замену аккумулятора;</li>
-             <li class="list-disc">Устраняют поломки электроники или механические повреждения;</li>
-             <li class="list-disc">Устраняют поломки электроники или механические повреждения;</li>
-             <li class="list-disc">Услуги шиномонтажа (замена, ремонт или подкачка колес);</li>
-             <li class="list-disc">Налаживание работы сигнализации, противоугонных систем;</li>
-             <li class="list-disc">Запуск двигателя;</li>
-             <li class="list-disc">Определение поломки на месте с последующим ее устранением;</li>
-             <li class="list-disc">Проблемы с АКПП.</li>
+             {% component 'contenteditor' file="home/list6.htm" fixture="" tools="bold,italic,ordered-list" class="list-disc" %}
+
          </ul>
          <br>
-         <p>В компанию можно обратиться, если закончилось топливо или требуется вытащить автомобиль из ямы или кювета,
-              требуется транспортировка транспортного средства, при невозможности техпомощи на дороге.</p>
-              <h1 class="text-center font-extrabold text-lg sm:text-2xl lg:text-4xl py-12">
-                 Способы связи
-             </h1>
-             <p>Чтобы получить быструю помощь на дорогах Спб и области, нужно связаться с диспетчером по телефонам 
-                 (позвонить или запросить обратный звонок),
-                  обратиться в мессенджер или оставить заявку на </p>
-         </div>
-         <div class="flex-col font-thin">
-         <p>
-             сайте. Для скорого решения проблемы и определения стоимости работ следует приложить фото поломки.
-         </p><br>
-         <p>
-             Для клиентов доступны WhatsApp, Viber, Telegram, VK. Автомастер озвучит фиксированную цену работы,
-              при спорных вопросах стоимость определяется на месте мастером.
-         </p><br>
-         <p>В компании всегда найдется выгодное предложение для клиентов, ни одно обращение не останется без внимания.</p>
-         <h1 class="text-center font-extrabold text-lg sm:text-2xl lg:text-4xl py-12">
-             Время важно!
-         </h1>
-         <p>Непредсказуемые проблемы в работе автомобиля заставляют изменить планы. 
-             Чтобы исключить возможные неудобства, диспетчер подбирает и отправляет на вызов мастера, ближайшего к месту поломки.
-              Грамотные и отлаженные действия сотрудников в кратчайшие сроки устранят поломку.</p><br>
-              <p>В компании работают мастера со стажем более 15 лет, знающие и легко разбирающиеся в современных, классических или эксклюзивных моделях автомобилей любых марок. 
-                  Они качественно и быстро окажут техпомощь на дорогах Спб.</p>
-                  <br>
-                  <p>Перечень предложенных услуг выполняют непосредственно сотрудники, что значительно сокращает время ожидания результата.</p>
+         {% component 'contenteditor' file="home/text6.htm" fixture="p" tools="bold,italic" class="" %}
+                {% component 'contenteditor' file="home/title4.htm" fixture="h1" tools="bold,italic" class="text-center font-extrabold text-lg sm:text-2xl lg:text-4xl py-12 m-auto" %}
+                {% component 'contenteditor' file="home/text7.htm" fixture="p" tools="bold,italic" class="" %}
+                {% component 'contenteditor' file="home/title4.htm" fixture="h1" tools="bold,italic" class="text-center font-extrabold text-lg sm:text-2xl lg:text-4xl py-12 m-auto" %}
+                {% component 'contenteditor' file="home/text8.htm" fixture="p" tools="bold,italic" class="" %}
+
          </div>
      </div>
  </div>
@@ -448,7 +500,7 @@ pageNumber = "{{ :page }}"
      <div class="w-96 lg:w-1/2 flex-col bg-white justify-between items-center text-center py-10 my-10">
          <h1 class="font-extrabold text-2xl">Оставьте заявку</h1>
          <p>Можем предложить специальные условия именно для вас!</p>
-         <form action="" class="flex-col">
+         <!-- <form action="" class="flex-col">
              <input class="bg-gray-300 w-96 md:w-1/2 mt-4 p-2" type="text" placeholder="Ваше имя" required />
              <input class="bg-gray-300 w-96 md:w-1/2 mt-4 p-2" type="tel" placeholder="Ваш телефон*" required />
              <textarea class="bg-gray-300 w-96 md:w-1/2 mt-4 p-2" cols="30" rows="10" placeholder="Комментарий"></textarea>
@@ -458,10 +510,11 @@ pageNumber = "{{ :page }}"
              </div>
              <input class="cursor-pointer w-96 md:w-1/2 bg-blue-700 text-white mt-2 hover:bg-blue-900 p-2 lg:mt-5 px-6 outline-none" type="submit" value="Узнать стоимость">  
              </div>
-         </form>
+         </form> -->
+         {% component 'commentsPost' %}
      </div>
  </div>
-</div>";s:5:"mtime";i:1611642352;s:6:"markup";s:36797:"<div>
+</div>";s:5:"mtime";i:1611732997;s:6:"markup";s:38453:"<div>
     <img style="height: 220vh; filter: brightness(30%);   z-index: -2;" class="absolute bg-auto bg-cover bg-contain" src="https://auto-help-spb.ru/images/top/index.jpg" alt="">
      <div>  
  <header class="pt-2">
@@ -511,16 +564,17 @@ pageNumber = "{{ :page }}"
              </a>
                  <div class='hidden lg:flex w-96'>
                  <i class="fas fa-map-marker-alt pr-2"></i>
-                 <p>Работаем по Москву</p>
+                 {% component 'contenteditor' file="home/head1.htm" fixture="p" tools="bold,italic" class="" %}
              </div>
              <div class='flex hidden lg:flex w-96'>
                  <i class="fas fa-clock pr-2"></i>
-                 <p>Работаем 24 часа</p>
+                 {% component 'contenteditor' file="home/head2.htm" fixture="p" tools="bold,italic" class="" %}
              </div>
              <div class='flex w-96'>
                  <i class="fas fa-phone-alt pr-2"></i>
                  <div class="flex-col text-xs md:text-base">
-                 <a class="hover:text-blue-500" href="tel:+79067031111">+7 (906)703-11-11</a>
+                 <!-- <a class="hover:text-blue-500" href="tel:+79067031111">+7 (906)703-11-11</a> -->
+                 {% component 'contenteditor' file="home/head3.htm" fixture="a" tools="bold,italic" class="hover:text-blue-500" %}
                  </div>
              </div>
          </div>
@@ -533,25 +587,106 @@ pageNumber = "{{ :page }}"
                      <img src="https://auto-help-spb.ru/images/menu-arrow.svg" alt="">
                      <div style="width: 90vw; top: 70px;" class="nav-submenu z-10  p-6 bg-gray-100 hidden absolute left-0">
                          <ul class=" flex flex-wrap items-center justify-evenly">
-                            
-                            {% set records = builderList.records %}
-                            {% set displayColumn = builderList.displayColumn %}
-                            {% set noRecordsMessage = builderList.noRecordsMessage %}
-                            {% set detailsPage = builderList.detailsPage %}
-                            {% set detailsKeyColumn = builderList.detailsKeyColumn %}
-                            {% set detailsUrlParameter = builderList.detailsUrlParameter %}
-                            
-                           
-                            {% for record in records %}
-                             <li class=" relative flex m-2 w-1/5">
-                                 <a href="#" class=" flex items-center text-black hover:text-orange-500">
+                            <li class=" relative flex m-2 w-1/5">
+                                <a href="{{ 'service1'|page }}" class=" flex items-center text-black hover:text-orange-500">
+                                    <i class="mr-2">
+                                        <img src="https://auto-help-spb.ru/images/avtohelp.png" alt="" class="w-10">
+                                    </i>Автомобильная помощь</a>
+                            </li>
+                            <li class=" relative flex m-2 w-1/5">
+                                    <a href="{{ 'service1'|page }}" class=" flex items-center text-black hover:text-orange-500">
                                      <i class="mr-2">
-                                         <img src="{{ record.icon|media }}" alt="" class="w-10">
-                                     </i>{{ record.title }}</a>
-                             </li>
-                             {% else %}
-                                    <li class="no-data">{{ noRecordsMessage }}</li>
-                            {% endfor %}
+                                        <img src="https://auto-help-spb.ru/images/autopsy-car.png" alt alt="" class="w-10">
+                                    </i>Вскрытие авто</a>
+                            </li>
+                             <li class=" relative flex m-2 w-1/5">
+                                <a href="{{ 'service2'|page }}" class=" flex items-center text-black hover:text-orange-500">
+                                    <i class="mr-2">
+                                        <img src="https://auto-help-spb.ru/images/opening-hood.png" alt alt="" class="w-10">
+                                    </i>Вскрытие капота</a>
+                            </li>
+                            <li class=" relative flex m-2 w-1/5">
+                                <a href="{{ 'service3'|page }}" class=" flex items-center text-black hover:text-orange-500">
+                                    <i class="mr-2">
+                                        <img src="https://auto-help-spb.ru/images/opening-trunk.png" alt alt="" class="w-10">
+                                    </i>Вскрытие багажника</a>
+                            </li>
+                            <li class=" relative flex m-2 w-1/5">
+                                    <a href="{{ 'service4'|page }}" class=" flex items-center text-black hover:text-orange-500">
+                                    <i class="mr-2">
+                                        <img src="https://auto-help-spb.ru/images/menu-1.svg" alt="" class="w-10">
+                                    </i>Прикурить аккумулятор</a>
+                            </li>
+                            <li class=" relative flex m-2 w-1/5">
+                                <a href="{{ 'service5'|page }}" class=" flex items-center text-black hover:text-orange-500">
+                                    <i class="mr-2">
+                                        <img src="https://auto-help-spb.ru/images/menu-11.svg " alt alt="" class="w-10">
+                                    </i>Замена АКБ</a>
+                            </li>
+                            <li class=" relative flex m-2 w-1/5 avto">
+                                <a href="{{ 'service6'|page }}" class=" flex items-center text-black hover:text-orange-500">
+                                    <i class="mr-2">
+                                        <img src="https://auto-help-spb.ru/images/menu-4.svg " alt="" class="w-10">
+                                    </i>Автоэлектрик с <br> выездом</a>
+                            </li>
+                            <li class=" relative flex m-2 w-1/5">
+                                <a href="{{ 'service7'|page }}" class=" flex items-center text-black hover:text-orange-500">
+                                    <i class="mr-2">
+                                        <img src="https://auto-help-spb.ru/images/car-mechanic-with-departure.png " alt="" class="w-10">
+                                    </i>Автомеханик с выездом</a>
+                            </li>
+                            <!-- <li class=" relative flex m-2 w-1/5">
+                                <a href="#" class=" flex items-center text-black hover:text-orange-500">
+                                    <i class="mr-2">
+                                        <img src="https://auto-help-spb.ru/images/menu-5.svg" alt="" class="w-10">
+                                    </i>Вытащить машину</a>
+                            </li>
+                            <li class=" relative flex m-2 w-1/5 mr-15">
+                                <a href="#" class=" flex items-center text-black hover:text-orange-500">
+                                    <i class="mr-2">
+                                        <img src=" https://auto-help-spb.ru/images/menu-10.svg" alt alt="" class="w-10">
+                                    </i>Ремонт, замена и <br> подкачка колёс</a>
+                            </li>
+                            <li class=" relative flex m-2 w-1/5">
+                                <a href="#" class=" flex items-center text-black hover:text-orange-500">
+                                    <i class="mr-2">
+                                        <img src="https://auto-help-spb.ru/images/vehicle-diagnostics.png"  alt="" class="w-10">
+                                     </i>Диагностика <br> автомобиля</a>
+                            </li>
+                            <li class=" relative flex m-2 w-1/5">
+                                <a href="#" class=" flex items-center text-black hover:text-orange-500">
+                                        <i class="mr-2">
+                                            <img src="https://auto-help-spb.ru/images/alarm-repair-and-deactivation.png " alt="" class="w-10">
+                                        </i>Ремонт и отключение <br> сигнализации</a>
+                            </li>
+                            <li class=" relative flex m-2 w-1/5">
+                                <a href="#" class=" flex items-center text-black hover:text-orange-500">
+                                    <i class="mr-2">
+                                        <img src="https://auto-help-spb.ru/images/menu-2.svg" alt="" class="w-10">
+                                    </i>Подвоз топлива
+                                </a>
+                            </li>
+                            <li class=" relative flex m-2 w-1/5">
+                                <a href="#" class=" flex items-center text-black hover:text-orange-500">
+                                    <i class="mr-2">
+                                        <img src="https://auto-help-spb.ru/images/engine-start.png" alt="" class="w-10">
+                                    </i>Запуск двигателя
+                                </a>
+                            </li>
+                            <li class=" relative flex m-2 w-1/5">
+                                <a href="#" class=" flex items-center text-black hover:text-orange-500">
+                                    <i class="mr-2">
+                                        <img src="https://auto-help-spb.ru/images/menu-7.svg " alt="" class="w-10">
+                                    </i>Буксировка автомобиля
+                                </a>
+                            </li>
+                            <li class=" relative flex m-2 w-1/5">
+                                <a href="#" class=" flex items-center text-black hover:text-orange-500">
+                                    <i class="mr-2">
+                                        <img src="https://auto-help-spb.ru/images/menu-8.svg" alt="" class="w-10">
+                                    </i>Разблокировка АКПП
+                                </a>
+                            </li> -->
                          </ul>
                          </div>
             
@@ -566,15 +701,15 @@ pageNumber = "{{ :page }}"
          </div>
  </header>
  <div class="header font-bold lg:text-5xl md:text-3xl text-xl mt-16 mx-6 md:mx-24">
- <h1 class="text-white">АВТОМОБИЛЬНАЯ ПОМОЩЬ НА ДОРОГЕ В МОСКВЕ</h1>
- <h1 class="text-white"> ОТ <span class="text-orange-600"> 500 РУБЛЕЙ </span></h1>
+ {% component 'contenteditor' file="home/title.htm" fixture="h1" tools="bold,italic" class="text-white" %}
+ <h1 class="text-white"> ОТ {% component 'contenteditor' file="home/price.htm" fixture="span" tools="bold,italic" class="text-orange-600" %}</h1>
  </div>
  <ul class="text-sm md:text-lg lg:xl flex-col items-center justify-evenly text-white mt-10 mx-6 md:mx-24">
-     <li><i class="fas fa-angle-double-right pr-4 text-orange-600 mt-4"></i>Возникла непредвиденная ситуация с авто?</li>
-     <li><i class="fas fa-angle-double-right pr-4 text-orange-600 mt-4"></i>Нужно срочно ехать?</li>
-     <li><i class="fas fa-angle-double-right pr-4 text-orange-600 mt-4"></i>Предлагаем любую автопомощь!</li>
-     <li><i class="fas fa-angle-double-right pr-4 text-orange-600 mt-4"></i>Приезжаем на место от 15 минут</li>
-     <li><i class="fas fa-angle-double-right pr-4 text-orange-600 mt-4"></i>Работаем без посредников</li>
+     <li><i class="fas fa-angle-double-right pr-4 text-orange-600 mt-4"></i>{% component 'contenteditor' file="home/list1.htm"  tools="bold,italic" class="" %}</li>
+     <li><i class="fas fa-angle-double-right pr-4 text-orange-600 mt-4"></i>{% component 'contenteditor' file="home/list2.htm"  tools="bold,italic" class="" %}</li>
+     <li><i class="fas fa-angle-double-right pr-4 text-orange-600 mt-4"></i>{% component 'contenteditor' file="home/list3.htm"  tools="bold,italic" class="" %}</li>
+     <li><i class="fas fa-angle-double-right pr-4 text-orange-600 mt-4"></i>{% component 'contenteditor' file="home/list4.htm"  tools="bold,italic" class="" %}</li>
+     <li><i class="fas fa-angle-double-right pr-4 text-orange-600 mt-4"></i>{% component 'contenteditor' file="home/list5.htm"  tools="bold,italic" class="" %}</li>
      <button onclick="callMasterBtn()" style="font-size: 16px;font-weight: 700;" class="outline-none mt-16 mb-8 py-4 px-8 bg-blue-600 hover:bg-blue-700  transition duration-200">Вызват мастера
      </button>  
        <!-- Root element for center items -->
@@ -630,7 +765,7 @@ pageNumber = "{{ :page }}"
  </div>
  </div>
  <div class="h-full w-full bg-white">
-<div class="w-4/5 m-auto flex justify-center text-center flex-wrap items-center">
+<div class="m-auto flex flex-wrap justify-center text-center items-center">
     {% partial 'home/aboutus' %}
  </div>
  <div class="pb-16 h-full flex-col bg-blue-700 justify-between items-center mt-10">
@@ -664,9 +799,9 @@ pageNumber = "{{ :page }}"
 <div class=" mx-4 lg:mx-16 bg-white py-16">
     <div class="flex items-center flex-wrap">
         <div class="md:w-1/2 w-full">
-     <p class="">Как часто бывает, автомобиль ломается в самый неподходящий момент. Не каждый может починить машину самостоятельно, качественно и быстро. Не всегда под рукой окажутся инструменты или запчасти, требуемые для устранения неполадок. Специалисты компании «Автопомощь» в Спб могут исправить большинство поломок на месте.</p>
+     {% component 'contenteditor' file="home/text1.htm" fixture="p" tools="bold,italic" class="" %}
      <br>
-     <p class="">Мы оказываем широкий спектр ремонтных услуг круглосуточно, имеет фиксированные цены, опытных и быстро реагирующих мастеров. Стоимость работы ниже рыночных на 10-20 %. Современные способы связи, с помощью которых можно четко определить объем работы, сокращают время ожидания. В отдельных случаях применяется эвакуация машины до места назначения.</p>
+     {% component 'contenteditor' file="home/text2.htm" fixture="p" tools="bold,italic" class="" %}
      </div>
      <img class="mt-6 md:w-1/2 w-full" src="https://auto-help-spb.ru/assets/cache_image/images/one/index_585x361_721.jpg" alt="">   
  </div>
@@ -757,28 +892,15 @@ pageNumber = "{{ :page }}"
 <div class=" bg-gray-100 py-12">
  <div class="flex-col flex-wrap mx-4 md:mx-16 lg:mx-24">
      <h1 class="title text-center font-extrabold text-xl md:text-2xl lg:text-4xl py-6">
-         Профессиональная автопомощь на дороге
+        {% component 'contenteditor' file="home/title2.htm" fixture="h1" tools="bold,italic" class="title text-center font-extrabold text-xl md:text-2xl lg:text-4xl py-6" %}
      </h1>
      <div class="flex-row flex-wrap ">
          <div class="flex-col font-thin px-2  w-full">
-         <p> 
-             Поломка транспортного средства влечет серьезные последствия и
-             для устранения не стоит пренебрегать помощью автомастера.
-         </p><br>
-         <p>
-             В работе должны быть четко выполнены мельчайшие детали, чтобы исключить повторные 
-             случаи. Ведь не всегда
-             пользователь может сразу определить возникшую проблему.
-         </p> <br>
+            {% component 'contenteditor' file="home/text4.htm" fixture="p" tools="bold,italic" class="" %}
          </div>
+         <br>
          <div class="flex-col font-thin px-2  w-full">
-         <p>
-             Небольшие поломки часто скрывают серьезные нарушения в работе автомобиля, 
-             которые определит только профессионал.
-             Не стоит рисковать, вызов мастера – наилучшее решение для автолюбителя.
-         </p><br>
-         <p>
-             Звоните нам прямо сейчас +7 (906)703-11-11. Мастера во всех районах!
+            {% component 'contenteditor' file="home/text5.htm" fixture="p" tools="bold,italic" class="" %}
          </p>
          </div>
      </div>
@@ -801,9 +923,9 @@ pageNumber = "{{ :page }}"
 <div class="flex items-center justify-center">
  <img src="https://auto-help-spb.ru/images/form-bg.jpg" class="absolute w-full" alt="">
  <div style="z-index: 3;" class="bg-white  lg:my-10  lg:w-11/12 text-center py-8">
-     <h1 class="mt-6 mb-4 font-extrabold text-2xl">Оставьте заявку</h1>
-     <p class="pb-4">Можем предложить специальные условия именно для вас!</p>
-     <form action="" class="flex lg:full  flex-wrap justify-evenly items-center">
+     <!-- <h1 class="mt-6 mb-4 font-extrabold text-2xl">Оставьте заявку</h1>
+     <p class="pb-4">Можем предложить специальные условия именно для вас!</p> -->
+     <!-- <form action="" class="flex lg:full  flex-wrap justify-evenly items-center">
          <input class="bg-gray-300 p-2 pr-16 ml-4 outline-none m-4 lg:w-1/4" type="text" placeholder="Ваше имя">
          <input class="bg-gray-300 p-2 pr-16 ml-4 outline-none m-4 lg:w-1/4" type="tel" placeholder="Ваш телефон*">
          <div class="flex flex-wrap items-center justify-center lg:w-1/4">
@@ -811,61 +933,30 @@ pageNumber = "{{ :page }}"
          <input class="hidden" type="file" id="file">
          <label class="w-9/12 sm:w-full cursor-pointer mt-4 lg:mt-0" for="file"><i class="fas fa-paperclip mr-2"></i>Прикрепить фото</label>
          </div>
-     </form>
+     </form> -->
+     {% component 'formSubscribe' %}
  </div>
 </div>
 <!-- Служба техпомощи компании section start -->
 <div class=" bg-gray-100">
- <div class="flex-col mx-4 md:mx-8 lg:mx-12 py-8 flex-wrap">
-     <h1 class="text-center font-extrabold text-lg sm:text-2xl lg:text-4xl py-12">
-         Служба техпомощи компании
-     </h1>
+ <div class="flex-col mx-4 md:mx-8 lg:mx-12 py-8 ">
+        {% component 'contenteditor' file="home/title3.htm" fixture="h1" tools="bold,italic" class="text-center font-extrabold text-lg sm:text-2xl lg:text-4xl py-12" %}
      <div class="flex mx-4 flex-wrap justify-center">
-         <div class="flex-col font-thin text-sm md:text-lg">
-         <p> 
-             Специалисты компании имеют многолетний опыт в техническом обслуживании автомобилей различных марок и моделей.
-              Они качественно выполняют следующие работы:
-         </p><br>
+         <div class="flex  flex-wrap font-thin text-sm md:text-lg">
+            {% component 'contenteditor' file="home/text3.htm" fixture="p" tools="bold,italic" class="" %}
+         <br>
+         <!-- {% component 'contenteditor' file="home/list6.htm" fixture="ul" tools="bold,italic,ordered-list" class="" %} -->
          <ul class="pl-4">
-             <li class="list-disc"> Вскрытие багажника, капота или автомобиля;</li>
-             <li class="list-disc">Запуск или замену аккумулятора;</li>
-             <li class="list-disc">Устраняют поломки электроники или механические повреждения;</li>
-             <li class="list-disc">Устраняют поломки электроники или механические повреждения;</li>
-             <li class="list-disc">Услуги шиномонтажа (замена, ремонт или подкачка колес);</li>
-             <li class="list-disc">Налаживание работы сигнализации, противоугонных систем;</li>
-             <li class="list-disc">Запуск двигателя;</li>
-             <li class="list-disc">Определение поломки на месте с последующим ее устранением;</li>
-             <li class="list-disc">Проблемы с АКПП.</li>
+             {% component 'contenteditor' file="home/list6.htm" fixture="" tools="bold,italic,ordered-list" class="list-disc" %}
+
          </ul>
          <br>
-         <p>В компанию можно обратиться, если закончилось топливо или требуется вытащить автомобиль из ямы или кювета,
-              требуется транспортировка транспортного средства, при невозможности техпомощи на дороге.</p>
-              <h1 class="text-center font-extrabold text-lg sm:text-2xl lg:text-4xl py-12">
-                 Способы связи
-             </h1>
-             <p>Чтобы получить быструю помощь на дорогах Спб и области, нужно связаться с диспетчером по телефонам 
-                 (позвонить или запросить обратный звонок),
-                  обратиться в мессенджер или оставить заявку на </p>
-         </div>
-         <div class="flex-col font-thin">
-         <p>
-             сайте. Для скорого решения проблемы и определения стоимости работ следует приложить фото поломки.
-         </p><br>
-         <p>
-             Для клиентов доступны WhatsApp, Viber, Telegram, VK. Автомастер озвучит фиксированную цену работы,
-              при спорных вопросах стоимость определяется на месте мастером.
-         </p><br>
-         <p>В компании всегда найдется выгодное предложение для клиентов, ни одно обращение не останется без внимания.</p>
-         <h1 class="text-center font-extrabold text-lg sm:text-2xl lg:text-4xl py-12">
-             Время важно!
-         </h1>
-         <p>Непредсказуемые проблемы в работе автомобиля заставляют изменить планы. 
-             Чтобы исключить возможные неудобства, диспетчер подбирает и отправляет на вызов мастера, ближайшего к месту поломки.
-              Грамотные и отлаженные действия сотрудников в кратчайшие сроки устранят поломку.</p><br>
-              <p>В компании работают мастера со стажем более 15 лет, знающие и легко разбирающиеся в современных, классических или эксклюзивных моделях автомобилей любых марок. 
-                  Они качественно и быстро окажут техпомощь на дорогах Спб.</p>
-                  <br>
-                  <p>Перечень предложенных услуг выполняют непосредственно сотрудники, что значительно сокращает время ожидания результата.</p>
+         {% component 'contenteditor' file="home/text6.htm" fixture="p" tools="bold,italic" class="" %}
+                {% component 'contenteditor' file="home/title4.htm" fixture="h1" tools="bold,italic" class="text-center font-extrabold text-lg sm:text-2xl lg:text-4xl py-12 m-auto" %}
+                {% component 'contenteditor' file="home/text7.htm" fixture="p" tools="bold,italic" class="" %}
+                {% component 'contenteditor' file="home/title4.htm" fixture="h1" tools="bold,italic" class="text-center font-extrabold text-lg sm:text-2xl lg:text-4xl py-12 m-auto" %}
+                {% component 'contenteditor' file="home/text8.htm" fixture="p" tools="bold,italic" class="" %}
+
          </div>
      </div>
  </div>
@@ -895,7 +986,7 @@ pageNumber = "{{ :page }}"
      <div class="w-96 lg:w-1/2 flex-col bg-white justify-between items-center text-center py-10 my-10">
          <h1 class="font-extrabold text-2xl">Оставьте заявку</h1>
          <p>Можем предложить специальные условия именно для вас!</p>
-         <form action="" class="flex-col">
+         <!-- <form action="" class="flex-col">
              <input class="bg-gray-300 w-96 md:w-1/2 mt-4 p-2" type="text" placeholder="Ваше имя" required />
              <input class="bg-gray-300 w-96 md:w-1/2 mt-4 p-2" type="tel" placeholder="Ваш телефон*" required />
              <textarea class="bg-gray-300 w-96 md:w-1/2 mt-4 p-2" cols="30" rows="10" placeholder="Комментарий"></textarea>
@@ -905,7 +996,8 @@ pageNumber = "{{ :page }}"
              </div>
              <input class="cursor-pointer w-96 md:w-1/2 bg-blue-700 text-white mt-2 hover:bg-blue-900 p-2 lg:mt-5 px-6 outline-none" type="submit" value="Узнать стоимость">  
              </div>
-         </form>
+         </form> -->
+         {% component 'commentsPost' %}
      </div>
  </div>
-</div>";s:4:"code";N;s:5:"title";s:4:"Home";s:3:"url";s:1:"/";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:11:"builderList";a:9:{s:10:"modelClass";s:37:"John\Priceservice\Models\PriceService";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:4:"slug";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:16:"detailsKeyColumn";s:4:"slug";s:19:"detailsUrlParameter";s:4:"slug";s:10:"pageNumber";s:11:"{{ :page }}";}}}
+</div>";s:4:"code";N;s:5:"title";s:4:"Home";s:3:"url";s:1:"/";s:6:"layout";s:7:"default";s:10:"meta_title";s:4:"Home";s:9:"is_hidden";s:1:"0";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";s:11:"builderList";a:9:{s:10:"modelClass";s:37:"John\Priceservice\Models\PriceService";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:4:"slug";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:7:"service";s:16:"detailsKeyColumn";s:4:"slug";s:19:"detailsUrlParameter";s:4:"slug";s:10:"pageNumber";s:11:"{{ :page }}";}s:13:"contenteditor";a:0:{}s:12:"commentsPost";a:0:{}s:13:"formSubscribe";a:5:{s:16:"urlToUnsubscribe";s:11:"unsubscribe";s:12:"urlToProfile";s:18:"subscriber-profile";s:3:"geo";s:8:"disabled";s:13:"thanksMessage";s:21:"Thanks for subscribe!";s:12:"errorMessage";s:21:"Thanks for subscribe!";}}}
